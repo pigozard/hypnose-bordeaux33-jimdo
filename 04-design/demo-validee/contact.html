@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tarifs, prise de rendez-vous et contact. Cabinet d'hypnose Benoît Raffard, 28 rue Scaliger, 33000 Bordeaux. 80€ la séance.">
+<title>Contact & Tarifs — Benoît Raffard, Hypnothérapeute Bordeaux</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Tarifs */
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.tarif-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  transition: all 0.25s;
+  position: relative;
+}
+.tarif-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+}
+.tarif-card.featured {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(91,126,107,0.1);
+}
+.tarif-card.featured::after {
+  content: 'Populaire';
+  position: absolute;
+  top: -10px; left: 50%; transform: translateX(-50%);
+  background: var(--color-accent); color: var(--color-white);
+  font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 3px 14px; border-radius: 50px;
+}
+.tarif-label {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600; margin-bottom: 2px;
+}
+.tarif-sub {
+  font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 16px;
+}
+.tarif-price {
+  font-family: var(--font-display);
+  font-size: 2.6rem; font-weight: 700; color: var(--color-accent); line-height: 1;
+}
+.tarif-price-unit {
+  font-size: 0.95rem; font-weight: 400; color: var(--color-text-muted);
+}
+.tarif-duration {
+  font-size: 0.82rem; color: var(--color-text-muted); margin: 4px 0 20px;
+}
+.tarif-cta {
+  display: block; padding: 12px;
+  background: var(--color-accent); color: var(--color-white);
+  border-radius: 10px; font-size: 0.88rem; font-weight: 500;
+  text-decoration: none; transition: background 0.2s;
+}
+.tarif-cta:hover { background: var(--color-accent-dark); }
+.tarif-note {
+  font-size: 0.78rem; color: var(--color-text-muted);
+  text-align: center; max-width: 520px;
+  margin: 28px auto 0; line-height: 1.6;
+}
+.tarif-payment {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+/* Contact grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.contact-info { display: flex; flex-direction: column; gap: 24px; }
+.contact-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 600; margin-bottom: 10px;
+}
+.contact-detail {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.92rem; color: var(--color-text-soft);
+  margin-bottom: 8px;
+}
+.contact-detail svg {
+  width: 20px; height: 20px; color: var(--color-accent); flex-shrink: 0;
+}
+.contact-detail a {
+  color: var(--color-text-soft); text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-detail a:hover { color: var(--color-accent); }
+
+.contact-note {
+  padding: 16px 20px;
+  background: var(--color-accent-bg);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--color-accent-dark);
+  line-height: 1.6;
+}
+
+.map-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  aspect-ratio: 1/1;
+  max-height: 400px;
+}
+.map-wrapper iframe {
+  width: 100%; height: 100%; border: 0;
+}
+
+/* Annulation notice */
+.annulation-notice {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  background: var(--color-bg-warm);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .tarifs-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .map-wrapper { aspect-ratio: 16/10; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Benoît <span>Raffard</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="hypnose.html">L'hypnose</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html" class="active">Contact & tarifs</a></li>
+      <li><a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre RDV
+      </a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-menu">
+  <a href="index.html">Accueil</a>
+  <a href="hypnose.html">L'hypnose</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="contact.html" class="active">Contact & tarifs</a>
+  <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag">Rendez-vous</div>
+    <h1>Contact & <em>tarifs</em></h1>
+    <p>Prenez rendez-vous en ligne ou contactez-moi directement. Cabinet accessible au cœur de Bordeaux.</p>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Tarifs</div>
+      <h2 class="section-title">Tarifs des séances</h2>
+    </div>
+    <div class="tarifs-grid">
+      <div class="tarif-card featured">
+        <div class="tarif-label">Séance individuelle</div>
+        <div class="tarif-sub">Tous sujets</div>
+        <div class="tarif-price">80<span class="tarif-price-unit">€</span></div>
+        <div class="tarif-duration">≈ 1 heure · cabinet ou visio</div>
+        <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="tarif-cta">Prendre rendez-vous</a>
+      </div>
+      <div class="tarif-card">
+        <div class="tarif-label">Arrêt du tabac</div>
+        <div class="tarif-sub">Protocole 2 séances</div>
+        <div class="tarif-price">240<span class="tarif-price-unit">€</span></div>
+        <div class="tarif-duration">1h + 2h · à 1 semaine d'intervalle</div>
+        <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="tarif-cta">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <p class="tarif-payment">Règlement par chèque, espèces ou virement.</p>
+    <p class="tarif-note">L'hypnose ne remplace pas un avis ou traitement médical. Seul un médecin est habilité à poser un diagnostic.</p>
+  </div>
+</section>
+
+<!-- ANNULATION -->
+<section class="section section-warm" style="padding: 48px 0;">
+  <div class="container">
+    <div class="annulation-notice">
+      <strong>Politique d'annulation :</strong> tout rendez-vous annulé à moins de 48h ou non honoré sera facturé en totalité. Cette mesure a été mise en place suite à une forte augmentation d'annulations impactant la prise de rendez-vous pour des patients motivés.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + MAP -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Contact</div>
+      <h2 class="section-title">Me trouver</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <h3>Cabinet</h3>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>28 rue Scaliger, 33000 Bordeaux</span>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span>Accessible par escalier</span>
+          </div>
+        </div>
+        <div class="contact-block">
+          <h3>Coordonnées</h3>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:0619185999">06 19 18 59 99</a>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:benoithypnose33@gmail.com">benoithypnose33@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-block">
+          <h3>Rendez-vous en ligne</h3>
+          <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="btn-primary" style="margin-top:4px;">
+            Réserver sur Crenolibre
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="contact-note">
+          La séance peut se faire au cabinet ou en visioconférence (sous certaines conditions). Contactez-moi pour en discuter.
+        </div>
+      </div>
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.0!2d-0.5757!3d44.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527c8f7f0a0a1%3A0x0!2s28+Rue+Scaliger%2C+33000+Bordeaux!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Prêt à franchir le pas ?</h2>
+      <p>Le premier rendez-vous est le plus important.</p>
+      <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="btn-white">
+        Prendre rendez-vous
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Benoît <span>Raffard</span></div>
+        <div class="footer-contact">
+          <a href="https://maps.google.com/?q=28+rue+Scaliger+33000+Bordeaux" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>28 rue Scaliger, Bordeaux</a>
+          <a href="tel:0619185999"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>06 19 18 59 99</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#">Mentions légales</a><span class="footer-sep">·</span><a href="#">Confidentialité</a><span class="footer-sep">·</span><span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Prendre rendez-vous</a></div>
+
+<script src="main.js"></script>
+</body>
+</html>

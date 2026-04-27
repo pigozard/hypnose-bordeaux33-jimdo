@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Benoît Raffard, Maître Praticien en Hypnose Ericksonienne à Bordeaux. Parcours, certifications, interventions en congrès médicaux et réseau de partenaires.">
+<title>À propos — Benoît Raffard, Hypnothérapeute Bordeaux</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 56px;
+  align-items: start;
+}
+.about-image {
+  aspect-ratio: 3/4;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--color-bg-warm) 0%, #e8e2d6 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; color: var(--color-text-muted); font-size: 0.82rem;
+  position: sticky; top: 88px;
+}
+.about-image svg { width: 44px; height: 44px; opacity: 0.35; }
+
+.about-tag {
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 10px;
+}
+.about-name {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 500; margin-bottom: 20px;
+}
+.about-text {
+  font-size: 0.95rem; color: var(--color-text-soft);
+  line-height: 1.8; margin-bottom: 16px;
+}
+
+.about-badges {
+  display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0;
+}
+.about-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; background: var(--color-accent-bg);
+  border-radius: 50px; font-size: 0.78rem; font-weight: 500;
+  color: var(--color-accent-dark);
+}
+.about-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+.about-quote {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-style: italic; color: var(--color-accent);
+  line-height: 1.5; margin: 28px 0 0;
+  padding-left: 16px; border-left: 2px solid var(--color-gold);
+}
+.about-quote cite {
+  display: block; font-size: 0.8rem; font-style: normal;
+  color: var(--color-text-muted); margin-top: 4px;
+}
+
+/* Événements clés */
+.events-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.event-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+}
+.event-date {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  padding-top: 2px;
+}
+.event-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.event-content p {
+  font-size: 0.88rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+/* Réseau inline */
+.reseau-inline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.reseau-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-accent);
+}
+.reseau-col ul {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.reseau-col ul li {
+  font-size: 0.88rem;
+  color: var(--color-text-soft);
+}
+
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-image { max-width: 320px; position: static; }
+}
+@media (max-width: 768px) {
+  .event-item { grid-template-columns: 1fr; gap: 4px; }
+  .reseau-inline { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Benoît <span>Raffard</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="hypnose.html">L'hypnose</a></li>
+      <li><a href="a-propos.html" class="active">À propos</a></li>
+      <li><a href="contact.html">Contact & tarifs</a></li>
+      <li><a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre RDV
+      </a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-menu">
+  <a href="index.html">Accueil</a>
+  <a href="hypnose.html">L'hypnose</a>
+  <a href="a-propos.html" class="active">À propos</a>
+  <a href="contact.html">Contact & tarifs</a>
+  <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
+</div>
+
+<!-- ABOUT -->
+<section class="section" style="padding-top: 120px;">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        Photo de Benoît
+      </div>
+      <div>
+        <div class="about-tag">À propos</div>
+        <h1 class="about-name">Benoît Raffard</h1>
+        <p class="about-text">Mon travail est de vous guider pour orienter votre attention vers l'objectif que vous souhaitez atteindre. Formé chez Xtrëma, je pratique l'hypnose ericksonienne à Bordeaux depuis plusieurs années dans mon cabinet du centre-ville.</p>
+        <p class="about-text">Ma spécificité : je travaille en étroite collaboration avec des médecins, pneumologues et somnologues, notamment dans l'accompagnement des patients souffrant d'apnées du sommeil non observants à leur traitement. Ce partenariat innovant avec des prestataires de santé a montré des résultats concrets — 37% des patients non observants sont devenus observants en 1 à 2 séances.</p>
+        <p class="about-text">J'interviens régulièrement lors de congrès médicaux en France et à l'international pour présenter cette approche et échanger avec des professionnels de santé.</p>
+
+        <div class="about-badges">
+          <span class="about-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>Maître Praticien certifié</span>
+          <span class="about-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>Adhérent SNH</span>
+          <span class="about-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>Congrès médicaux internationaux</span>
+          <span class="about-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>Partenariat Dom'Air Santé / SOS Oxygène / ASDIA</span>
+        </div>
+
+        <blockquote class="about-quote">
+          « Chacun a en lui toutes les ressources pour vivre sa bonne vie. »
+          <cite>— Milton Erickson</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉVÉNEMENTS CLÉS -->
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Parcours</div>
+      <h2 class="section-title">Interventions & congrès</h2>
+      <p class="section-desc">Quelques temps forts de mon activité auprès des professionnels de santé.</p>
+    </div>
+    <div class="events-list">
+      <div class="event-item">
+        <div class="event-date">Mars 2023</div>
+        <div class="event-content">
+          <h3>Symposia Dom'Air Santé</h3>
+          <p>Présentation des résultats de l'observation du partenariat avec Dom'Air Santé aux médecins de la région Pyrénées Atlantique et Hautes Pyrénées. 37% de réussite sur les patients non observants.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Nov. 2022</div>
+        <div class="event-content">
+          <h3>Congrès ORL & Pneumologie de l'Océan Indien</h3>
+          <p>2ème participation — présentation des chiffres issus de 4 ans d'observation avec Dom'Air Santé sur l'accompagnement des patients apnées du sommeil.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Juil. 2022</div>
+        <div class="event-content">
+          <h3>Congrès Cardiosleep, Corse</h3>
+          <p>Atelier Hypnose & Trouble du Sommeil au congrès médical sur le sommeil, en partenariat avec SOS Oxygène.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Oct. 2020</div>
+        <div class="event-content">
+          <h3>Symposium GSK — BPCO et Tabac</h3>
+          <p>Intervention auprès de médecins généralistes d'Aquitaine sur l'intérêt de l'hypnose dans la prise en charge globale de la BPCO et du sevrage tabagique.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Déc. 2019</div>
+        <div class="event-content">
+          <h3>Congrès international, Île Maurice</h3>
+          <p>Plénière "Hypnose et Sommeil" et atelier "Hypnose et sevrage tabagique" au programme scientifique du congrès d'ORL & Pneumologie de l'Océan Indien.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSEAU -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Réseau</div>
+      <h2 class="section-title">Prise en charge pluridisciplinaire</h2>
+      <p class="section-desc">Je travaille en réseau avec des professionnels de santé pour un accompagnement global.</p>
+    </div>
+    <div class="reseau-inline">
+      <div class="reseau-col">
+        <h3>Médical</h3>
+        <ul>
+          <li>Médecin Généraliste</li>
+          <li>Médecin Somnologue</li>
+          <li>ORL, Pneumologue, Urologue</li>
+        </ul>
+      </div>
+      <div class="reseau-col">
+        <h3>Paramédical</h3>
+        <ul>
+          <li>Coach Sportif</li>
+          <li>Diététicienne / Nutritionniste</li>
+          <li>Kinésithérapeute, Ostéopathe</li>
+        </ul>
+      </div>
+      <div class="reseau-col">
+        <h3>Prestataires</h3>
+        <ul>
+          <li>Dom'Air Santé</li>
+          <li>SOS Oxygène</li>
+          <li>ASDIA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Prêt à franchir le pas ?</h2>
+      <p>Le premier rendez-vous est le plus important.</p>
+      <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="btn-white">
+        Prendre rendez-vous
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Benoît <span>Raffard</span></div>
+        <div class="footer-contact">
+          <a href="https://maps.google.com/?q=28+rue+Scaliger+33000+Bordeaux" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>28 rue Scaliger, Bordeaux</a>
+          <a href="tel:0619185999"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>06 19 18 59 99</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#">Mentions légales</a><span class="footer-sep">·</span><a href="#">Confidentialité</a><span class="footer-sep">·</span><span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Prendre rendez-vous</a></div>
+
+<script src="main.js"></script>
+</body>
+</html>

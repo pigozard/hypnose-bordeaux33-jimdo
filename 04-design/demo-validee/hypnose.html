@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Qu'est-ce que l'hypnose ericksonienne ? Découvrez comment elle fonctionne, ses indications (stress, sommeil, tabac, phobies) et les réponses à vos questions.">
+<title>L'hypnose ericksonienne — Benoît Raffard, Hypnothérapeute Bordeaux</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hypno-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hypno-intro-text h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.hypno-intro-text p {
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.hypno-intro-image {
+  aspect-ratio: 4/3;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--color-bg-warm) 0%, #e8e2d6 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-muted); font-size: 0.82rem;
+  flex-direction: column; gap: 8px;
+}
+.hypno-intro-image svg { width: 40px; height: 40px; opacity: 0.35; }
+
+.indications-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.indication-full-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 24px 20px;
+  transition: all 0.25s;
+}
+.indication-full-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91,126,107,0.06);
+}
+.indication-full-card .icon {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.indication-full-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.indication-full-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.disclaimer {
+  max-width: 640px;
+  margin: 40px auto 0;
+  padding: 20px 24px;
+  background: var(--color-bg-warm);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .hypno-intro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hypno-intro-image { max-width: 400px; }
+  .indications-full-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .indications-full-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Benoît <span>Raffard</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="hypnose.html" class="active">L'hypnose</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact & tarifs</a></li>
+      <li><a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre RDV
+      </a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-menu">
+  <a href="index.html">Accueil</a>
+  <a href="hypnose.html" class="active">L'hypnose</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="contact.html">Contact & tarifs</a>
+  <a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag">Comprendre</div>
+    <h1>L'hypnose <em>ericksonienne</em></h1>
+    <p>Un état naturel de conscience modifiée, guidé par la communication, pour accéder à vos ressources intérieures.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="hypno-intro-grid">
+      <div class="hypno-intro-text">
+        <h2>Ce n'est pas ce que vous croyez</h2>
+        <p>Oubliez l'hypnose de spectacle. L'hypnose ericksonienne est une pratique thérapeutique douce, où vous restez pleinement conscient et maître de vous-même.</p>
+        <p>Elle induit un état de rêverie — comme quand vous conduisez en "pilote automatique" — qui permet d'accéder à votre inconscient. D'après Milton Erickson, celui-ci est un réservoir d'expérience et de sagesse, un terreau fertile en solutions.</p>
+        <p>Le cerveau produit des endorphines, les hormones du bien-être. Le thérapeute agit en tant que guide. La clé repose sur votre participation : vous possédez déjà les ressources nécessaires pour répondre aux situations que vous rencontrez.</p>
+      </div>
+      <div class="hypno-intro-image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        Image d'ambiance cabinet
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDICATIONS COMPLÈTES -->
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Indications</div>
+      <h2 class="section-title">Pour quelles situations ?</h2>
+      <p class="section-desc">L'hypnose ericksonienne s'applique à un large éventail de troubles et d'objectifs de développement personnel.</p>
+    </div>
+    <div class="indications-full-grid">
+      <div class="indication-full-card">
+        <div class="icon">😰</div>
+        <h3>Angoisse & stress</h3>
+        <p>Gestion du stress chronique, crises d'angoisse, anxiété généralisée.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🌙</div>
+        <h3>Troubles du sommeil</h3>
+        <p>Insomnie, apnées du sommeil, difficultés d'endormissement.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🚭</div>
+        <h3>Addictions</h3>
+        <p>Tabac, alcool, jeu, travail — se libérer des comportements compulsifs.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">😟</div>
+        <h3>États dépressifs</h3>
+        <p>Accompagnement complémentaire pour sortir d'un état dépressif.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🕷️</div>
+        <h3>Peurs & phobies</h3>
+        <p>Phobie de l'avion, claustrophobie, arachnophobie, peur du vide…</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🔁</div>
+        <h3>TOC & compulsions</h3>
+        <p>Comportements répétitifs, compulsions alimentaires, rituels envahissants.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">⚖️</div>
+        <h3>Surpoids</h3>
+        <p>Travailler sur la relation à la nourriture et les comportements alimentaires.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">💔</div>
+        <h3>Étapes de vie</h3>
+        <p>Deuil, divorce, traumatisme — traverser les moments difficiles.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">💪</div>
+        <h3>Confiance en soi</h3>
+        <p>Estime de soi, gestion des émotions, créativité, écoute de soi.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🎯</div>
+        <h3>Préparation mentale</h3>
+        <p>Examens, compétitions sportives, entretiens, prise de parole en public.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🔄</div>
+        <h3>Reconversion professionnelle</h3>
+        <p>Lever les freins et développer ses capacités pour une nouvelle carrière.</p>
+      </div>
+      <div class="indication-full-card">
+        <div class="icon">🧒</div>
+        <h3>Aide scolaire</h3>
+        <p>Concentration, mémoire, stress des examens, bégaiement, énurésie.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Important :</strong> une séance d'hypnose ne remplace en aucun cas un avis ou un traitement médical. Seul un médecin est habilité à poser un diagnostic et à prescrire un traitement. L'hypnose peut vous accompagner en complément — parlez-en avec votre médecin.
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Questions fréquentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-question">
+          Est-ce que je perds le contrôle sous hypnose ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" style="max-height:160px;">
+          <div class="faq-answer-inner">Non. Vous restez pleinement conscient, comme lors d'une rêverie. Vous êtes apaisé et toujours maître de vous-même. Il n'y a aucune perte de contrôle.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Combien de séances faut-il ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Cela dépend du sujet : certaines problématiques se traitent en 1 à 3 séances, d'autres demandent un suivi plus long. On fait le point ensemble à chaque fois.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          L'hypnose fonctionne-t-elle sur tout le monde ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, tout le monde peut entrer en état d'hypnose — c'est un état naturel que vous vivez au quotidien. La clé repose sur votre motivation et votre participation active.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          C'est remboursé ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Pas par la sécurité sociale, mais de plus en plus de mutuelles proposent un forfait "médecines douces" qui couvre une partie des séances. Renseignez-vous auprès de la vôtre.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Quelle différence avec l'hypnose de spectacle ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">L'hypnose de spectacle vise le divertissement. L'hypnose ericksonienne est une pratique thérapeutique sérieuse, basée sur la communication et le respect de la personne. Rien à voir.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Une question ? Un doute ?</h2>
+      <p>N'hésitez pas à me contacter pour en discuter avant de prendre rendez-vous.</p>
+      <a href="contact.html" class="btn-white">Me contacter</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Benoît <span>Raffard</span></div>
+        <div class="footer-contact">
+          <a href="https://maps.google.com/?q=28+rue+Scaliger+33000+Bordeaux" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            28 rue Scaliger, Bordeaux
+          </a>
+          <a href="tel:0619185999">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 19 18 59 99
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#">Mentions légales</a><span class="footer-sep">·</span>
+        <a href="#">Confidentialité</a><span class="footer-sep">·</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a href="https://www.crenolibre.fr/prendre-rdv/59874_benoitraffard" target="_blank">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+  Prendre rendez-vous
+</a></div>
+
+<script src="main.js"></script>
+</body>
+</html>
