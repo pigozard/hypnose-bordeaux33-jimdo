@@ -74,7 +74,6 @@
   color: var(--color-text-muted); margin-top: 6px;
 }
 
-/* Événements */
 .events-list {
   max-width: 720px; margin: 0 auto;
   display: flex; flex-direction: column;
@@ -100,7 +99,6 @@
   font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.65;
 }
 
-/* Réseau */
 .reseau-inline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -115,7 +113,15 @@
 .reseau-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
 .reseau-col ul li { font-size: 0.88rem; color: var(--color-text-soft); }
 
-/* Photo facade dans réseau */
+.reseau-apnees-note {
+  max-width: 720px; margin: 28px auto 0;
+  padding: 18px 22px;
+  background: var(--color-accent-bg);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.7;
+}
+
 .facade-block {
   max-width: 720px; margin: 48px auto 0;
   border-radius: var(--radius); overflow: hidden;
@@ -137,8 +143,11 @@
 <body>
 
 <nav id="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Benoît <span>Raffard</span></a>
+ <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-br.png" alt="Logo Benoît Raffard">
+      Benoît <span>Raffard</span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="hypnose.html">L'hypnose</a></li>
@@ -160,7 +169,6 @@
   <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
 </div>
 
-<!-- ABOUT -->
 <section class="section" style="padding-top: 120px;">
   <div class="container">
     <div class="about-grid">
@@ -207,7 +215,6 @@
   </div>
 </section>
 
-<!-- ÉVÉNEMENTS -->
 <section class="section section-warm">
   <div class="container">
     <div class="section-header">
@@ -251,11 +258,24 @@
           <p>Plénière "Hypnose et Sommeil" et atelier "Hypnose et sevrage tabagique" au programme scientifique du congrès d'ORL & Pneumologie de l'Océan Indien.</p>
         </div>
       </div>
+      <div class="event-item">
+        <div class="event-date">Mars 2019</div>
+        <div class="event-content">
+          <h3>Symposia Dom'Air Santé, Andorra</h3>
+          <p>Présentation de l'hypnothérapie et de son intérêt dans le cadre du sommeil devant des pneumologues, médecins généralistes et ORL spécialisés.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Avr. 2019</div>
+        <div class="event-content">
+          <h3>Base aérienne 106, Mérignac</h3>
+          <p>Intervention sur l'intérêt de l'hypnothérapie dans le cadre d'une prise en charge médicale pluridisciplinaire, auprès du personnel de l'antenne médicale.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- RÉSEAU -->
 <section class="section">
   <div class="container">
     <div class="section-header">
@@ -289,13 +309,15 @@
         </ul>
       </div>
     </div>
+    <div class="reseau-apnees-note">
+      J'accompagne les patients souffrant d'apnées du sommeil et non observants à leur traitement, en travaillant sur les raisons de l'intolérance à leur ventilation nocturne — claustrophobie, image de soi, désagrément lié au port du masque — pour améliorer durablement la qualité de leur sommeil.
+    </div>
     <div class="facade-block">
       <img src="images/facade-2.png" alt="28 rue Scaliger, Bordeaux — entrée du cabinet">
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-band">
   <div class="container">
     <div class="cta-inner">
