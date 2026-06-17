@@ -106,6 +106,21 @@
   line-height: 1.6;
 }
 
+.horaires-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  color: var(--color-text-soft);
+}
+.horaires-table td {
+  padding: 5px 0;
+}
+.horaires-table td:first-child {
+  font-weight: 600;
+  color: var(--color-text);
+  width: 130px;
+}
+
 /* Map + photo */
 .map-photo-block {
   display: flex; flex-direction: column; gap: 16px;
@@ -224,6 +239,13 @@
           </div>
         </div>
         <div class="contact-block">
+          <h3>Horaires</h3>
+          <table class="horaires-table">
+            <tr><td>Mardi – Jeudi</td><td>9h – 12h &nbsp;/&nbsp; 14h – 18h</td></tr>
+            <tr><td>Vendredi</td><td>9h – 13h</td></tr>
+          </table>
+        </div>
+        <div class="contact-block">
           <h3>Coordonnées</h3>
           <div class="contact-detail">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -261,6 +283,34 @@
   </div>
 </section>
 
+<!-- MENTIONS LÉGALES -->
+<section class="section" id="mentions-legales">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Légal</div>
+      <h2 class="section-title">Mentions <em>légales</em></h2>
+    </div>
+    <div style="max-width: 720px; margin: 0 auto; font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.8;">
+      <p><strong>Responsable de la publication</strong><br>
+      Benoît Raffard — Auto-entrepreneur<br>
+      SIRET : 834 833 641<br>
+      28 rue Scaliger, 33000 Bordeaux<br>
+      Tél. : 06 19 18 59 99<br>
+      Email : benoithypnose33@gmail.com</p>
+
+      <p><strong>Hébergement</strong><br>
+      Ce site est hébergé par Jimdo GmbH, Stresemannstraße 375, 22761 Hamburg, Allemagne.</p>
+
+      <p><strong>Activité</strong><br>
+      Hypnothérapeute — pratique libérale non réglementée par un ordre professionnel.<br>
+      L'hypnose ericksonienne ne se substitue en aucun cas à un avis médical ou à un traitement prescrit par un médecin.</p>
+
+      <p><strong>Données personnelles</strong><br>
+      Ce site ne collecte aucune donnée personnelle à des fins commerciales. Les informations transmises via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-band">
   <div class="container">
@@ -292,7 +342,7 @@
         </div>
       </div>
       <div class="footer-right">
-        <a href="#">Mentions légales</a><span class="footer-sep">·</span>
+        <a href="contact.html#mentions-legales">Mentions légales</a><span class="footer-sep">·</span>
         <a href="#">Confidentialité</a><span class="footer-sep">·</span>
         <span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
       </div>
