@@ -9,26 +9,28 @@
 <style>
 .about-grid {
   display: grid;
-  grid-template-columns: 4fr 6fr;
-  gap: 64px;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
   align-items: start;
 }
 .about-image {
   position: sticky; top: 88px;
 }
 .about-image-frame {
-  border-radius: 20px; overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow-md);
   aspect-ratio: 3/4;
+  max-height: 340px;
 }
 .about-image-frame img {
   width: 100%; height: 100%; object-fit: cover; object-position: center top;
 }
 .about-image-secondary {
-  margin-top: 16px;
+  margin-top: 12px;
   border-radius: var(--radius); overflow: hidden;
   box-shadow: var(--shadow-sm);
   aspect-ratio: 4/3;
+  max-height: 180px;
 }
 .about-image-secondary img {
   width: 100%; height: 100%; object-fit: cover;
@@ -186,7 +188,7 @@
       <div>
         <div class="about-tag">À propos</div>
         <h1 class="about-name">Benoît Raffard</h1>
-        <p class="about-text">Mon travail est de vous guider pour orienter votre attention vers l'objectif que vous souhaitez atteindre. Formé chez Xtrëma, je pratique l'hypnose ericksonienne à Bordeaux depuis 2018 dans mon cabinet du centre-ville.</p>
+        <p class="about-text">Mon travail est de vous guider pour orienter votre attention vers l'objectif que vous souhaitez atteindre. Formé chez Xtrëma, je pratique l'hypnose Ericksonienne à Bordeaux depuis 2018 dans mon cabinet du centre-ville.</p>
         <p class="about-text">Ma spécificité : je travaille en étroite collaboration avec des médecins, pneumologues et somnologues, notamment dans l'accompagnement des patients souffrant d'apnées du sommeil non observants à leur traitement. Ce partenariat innovant avec des prestataires de santé a montré des résultats concrets — 37% des patients non observants sont devenus observants en 1 à 2 séances.*</p>
         <p class="about-text" style="font-size:0.78rem; font-style:italic; color: var(--color-text-muted);">*Observation menée depuis 2019 du partenariat avec un PSAD.</p>
         <p class="about-text">J'interviens régulièrement lors de congrès médicaux en France et à l'international pour présenter cette approche et échanger avec des professionnels de santé.</p>
