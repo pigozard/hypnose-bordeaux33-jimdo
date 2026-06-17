@@ -130,6 +130,71 @@
 .indication-card p { font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.6; }
 .indications-more { text-align: center; margin-top: 36px; }
 
+/* Teaser apnée */
+.apnee-teaser {
+  background: linear-gradient(135deg, #1a2e24 0%, #2a4a38 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 52px 56px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+.apnee-teaser-tag {
+  font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.14em; color: rgba(255,255,255,0.5);
+  margin-bottom: 14px;
+}
+.apnee-teaser h2 {
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 500; line-height: 1.15;
+  margin-bottom: 16px; color: #fff;
+}
+.apnee-teaser h2 em { font-style: italic; color: #7ec4a0; }
+.apnee-teaser p {
+  font-size: 0.93rem; color: rgba(255,255,255,0.72);
+  line-height: 1.75; max-width: 520px; margin-bottom: 28px;
+}
+.apnee-teaser-stats {
+  display: flex; gap: 36px; margin-bottom: 32px;
+}
+.apnee-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 700; color: #7ec4a0; line-height: 1;
+}
+.apnee-stat-label {
+  font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 4px; line-height: 1.4;
+}
+.apnee-teaser-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px;
+  background: #7ec4a0; color: #1a2e24;
+  border-radius: 10px; font-size: 0.9rem; font-weight: 700;
+  text-decoration: none; transition: background 0.2s;
+}
+.apnee-teaser-cta:hover { background: #93d4b5; }
+.apnee-teaser-logo {
+  display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
+}
+.apnee-partner-tag {
+  font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.35);
+  text-align: right; margin-bottom: 4px;
+}
+.apnee-partner-pill {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 8px 16px;
+  font-size: 0.82rem; color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .apnee-teaser { grid-template-columns: 1fr; padding: 36px 28px; }
+  .apnee-teaser-logo { align-items: flex-start; }
+  .apnee-partner-tag { text-align: left; }
+}
+
 /* Steps */
 .steps-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -208,6 +273,7 @@
     <ul class="nav-links">
       <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="hypnose.html">L'hypnose</a></li>
+      <li><a href="apnee-sommeil.html">Apnées du sommeil</a></li>
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html">Contact & tarifs</a></li>
       <li><a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-cta">
@@ -221,6 +287,7 @@
 <div class="nav-mobile-menu">
   <a href="index.html" class="active">Accueil</a>
   <a href="hypnose.html">L'hypnose</a>
+  <a href="apnee-sommeil.html">Apnées du sommeil</a>
   <a href="a-propos.html">À propos</a>
   <a href="contact.html">Contact & tarifs</a>
   <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
@@ -325,6 +392,39 @@
     </div>
     <div class="indications-more">
       <a href="hypnose.html" class="btn-ghost">Voir toutes les indications</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEASER APNÉE -->
+<section class="section">
+  <div class="container">
+    <div class="apnee-teaser">
+      <div>
+        <div class="apnee-teaser-tag">Spécialité</div>
+        <h2>Apnées du sommeil —<br>une approche <em>complémentaire</em></h2>
+        <p>Vous portez un masque CPAP mais ne supportez pas son port ? Claustrophobie, image de soi, inconfort… l'hypnose agit sur les freins psychologiques qui empêchent l'observance du traitement.</p>
+        <div class="apnee-teaser-stats">
+          <div>
+            <div class="apnee-stat-num">37%</div>
+            <div class="apnee-stat-label">des patients non observants<br>devenus observants</div>
+          </div>
+          <div>
+            <div class="apnee-stat-num">1–2</div>
+            <div class="apnee-stat-label">séances suffisantes<br>dans la majorité des cas</div>
+          </div>
+        </div>
+        <a href="apnee-sommeil.html" class="apnee-teaser-cta">
+          En savoir plus
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="apnee-teaser-logo">
+        <div class="apnee-partner-tag">Réseau partenaires</div>
+        <div class="apnee-partner-pill">Dom'Air Santé</div>
+        <div class="apnee-partner-pill">SOS Oxygène</div>
+        <div class="apnee-partner-pill">ASDIA</div>
+      </div>
     </div>
   </div>
 </section>

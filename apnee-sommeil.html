@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hypnose et apnées du sommeil à Bordeaux. Benoît Raffard accompagne les patients non observants à leur traitement CPAP. Réseau médical structuré, résultats prouvés.">
+<title>Hypnose & Apnées du Sommeil — Benoît Raffard, Bordeaux</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Hero foncé spécifique */
+.apnee-hero {
+  background: linear-gradient(135deg, #1a2e24 0%, #2a4a38 100%);
+  padding: 140px 0 100px;
+  color: #fff;
+}
+.apnee-hero .section-tag { color: rgba(255,255,255,0.5); }
+.apnee-hero h1 {
+  font-family: var(--font-display);
+  font-size: 3.2rem; font-weight: 500;
+  line-height: 1.1; letter-spacing: -0.03em;
+  margin-bottom: 20px; color: #fff;
+}
+.apnee-hero h1 em { font-style: italic; color: #7ec4a0; }
+.apnee-hero p {
+  font-size: 1.05rem; color: rgba(255,255,255,0.72);
+  line-height: 1.75; max-width: 560px; margin-bottom: 0;
+}
+.apnee-hero-stats {
+  display: flex; gap: 48px; margin-top: 48px; padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  flex-wrap: wrap;
+}
+.apnee-hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem; font-weight: 700;
+  color: #7ec4a0; line-height: 1;
+}
+.apnee-hero-stat-label {
+  font-size: 0.82rem; color: rgba(255,255,255,0.5);
+  margin-top: 6px; line-height: 1.5;
+}
+.apnee-hero-note {
+  font-size: 0.72rem; font-style: italic;
+  color: rgba(255,255,255,0.3);
+  margin-top: 16px;
+}
+
+/* Sections contenu */
+.apnee-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.apnee-why-text h2 {
+  font-family: var(--font-display);
+  font-size: 1.9rem; font-weight: 600;
+  margin-bottom: 18px; line-height: 1.2;
+}
+.apnee-why-text p {
+  font-size: 0.95rem; color: var(--color-text-soft);
+  line-height: 1.8; margin-bottom: 14px;
+  text-align: justify;
+}
+.apnee-why-image {
+  border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+  background: var(--color-bg-warm);
+  display: flex; align-items: center; justify-content: center;
+}
+.apnee-why-image img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Raisons intolérance */
+.raisons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.raison-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: all var(--transition);
+}
+.raison-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.raison-icon { font-size: 1.6rem; margin-bottom: 14px; }
+.raison-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;
+}
+.raison-card p {
+  font-size: 0.85rem; color: var(--color-text-soft); line-height: 1.65;
+}
+
+/* Process */
+.apnee-process {
+  display: flex; flex-direction: column; gap: 0;
+  max-width: 680px; margin: 0 auto;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+}
+.process-step:last-child { border-bottom: none; }
+.process-num {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent-bg);
+  border: 1.5px solid var(--color-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+.process-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;
+  padding-top: 8px;
+}
+.process-content p {
+  font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.65;
+}
+
+/* Réseau */
+.reseau-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.reseau-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+}
+.reseau-card-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--color-accent); margin-bottom: 8px;
+}
+.reseau-card p {
+  font-size: 0.82rem; color: var(--color-text-soft); line-height: 1.6;
+}
+
+/* Congrès inline */
+.congres-mini {
+  max-width: 680px; margin: 0 auto;
+}
+.congres-mini-item {
+  display: flex; gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: baseline;
+}
+.congres-mini-date {
+  font-family: var(--font-display);
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--color-accent); min-width: 80px;
+}
+.congres-mini-text {
+  font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.6;
+}
+
+/* Note légale */
+.apnee-legal-note {
+  max-width: 640px; margin: 40px auto 0;
+  padding: 18px 22px;
+  background: var(--color-bg-warm);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.82rem; color: var(--color-text-soft); line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .apnee-why-grid { grid-template-columns: 1fr; gap: 36px; }
+  .raisons-grid { grid-template-columns: 1fr 1fr; }
+  .reseau-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .apnee-hero { padding: 110px 0 72px; }
+  .apnee-hero h1 { font-size: 2.2rem; }
+  .apnee-hero-stats { gap: 28px; }
+  .raisons-grid { grid-template-columns: 1fr; }
+  .process-step { grid-template-columns: 44px 1fr; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-br.png" alt="Logo Benoît Raffard">
+      Benoît <span>Raffard</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="hypnose.html">L'hypnose</a></li>
+      <li><a href="apnee-sommeil.html">Apnées du sommeil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact & tarifs</a></li>
+      <li><a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre RDV
+      </a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-menu">
+  <a href="index.html">Accueil</a>
+  <a href="hypnose.html">L'hypnose</a>
+  <a href="apnee-sommeil.html">Apnées du sommeil</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="contact.html">Contact & tarifs</a>
+  <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
+</div>
+
+<!-- HERO -->
+<section class="apnee-hero">
+  <div class="container">
+    <div class="section-tag">Spécialité</div>
+    <h1>Hypnose &<br><em>apnées du sommeil</em></h1>
+    <p>Vous souffrez d'apnées du sommeil mais ne supportez pas votre masque CPAP ? L'hypnose ericksonienne agit sur les freins psychologiques qui empêchent l'observance du traitement — et les résultats sont mesurables.</p>
+    <div class="apnee-hero-stats">
+      <div>
+        <div class="apnee-hero-stat-num">37%</div>
+        <div class="apnee-hero-stat-label">des patients non observants<br>devenus observants</div>
+      </div>
+      <div>
+        <div class="apnee-hero-stat-num">1–2</div>
+        <div class="apnee-hero-stat-label">séances dans la majorité<br>des cas</div>
+      </div>
+      <div>
+        <div class="apnee-hero-stat-num">2019</div>
+        <div class="apnee-hero-stat-label">début du partenariat<br>avec les PSAD</div>
+      </div>
+    </div>
+    <p class="apnee-hero-note">*Observation menée depuis 2019 en partenariat avec des prestataires de santé à domicile (PSAD).</p>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="section">
+  <div class="container">
+    <div class="apnee-why-grid">
+      <div class="apnee-why-text">
+        <h2>Le masque : pas un problème technique, un problème psychologique</h2>
+        <p>L'apnée du sommeil se traite efficacement avec une ventilation en pression positive (CPAP). Pourtant, une part significative des patients abandonne ce traitement — non pas parce qu'il ne fonctionne pas, mais parce qu'ils ne parviennent pas à tolérer le port du masque.</p>
+        <p>Les raisons sont rarement mécaniques. Elles sont psychologiques : une claustrophobie latente activée par le masque, une difficulté à accepter l'image renvoyée, ou simplement une résistance inconsciente à un objet perçu comme intrusif.</p>
+        <p>C'est précisément là qu'intervient l'hypnose ericksonienne. En travaillant sur l'inconscient — là où se logent ces résistances — elle permet de lever les freins qui bloquent l'observance, souvent en une à deux séances.</p>
+      </div>
+      <div class="apnee-why-image">
+        <img src="images/cabinet-6.png" alt="Cabinet Benoît Raffard — consultation hypnose sommeil Bordeaux">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RAISONS D'INTOLÉRANCE -->
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Les freins</div>
+      <h2 class="section-title">Pourquoi certains patients <em>n'observent pas</em> ?</h2>
+      <p class="section-desc">Derrière le rejet du masque se cachent des mécanismes psychologiques bien identifiés.</p>
+    </div>
+    <div class="raisons-grid">
+      <div class="raison-card">
+        <div class="raison-icon">😰</div>
+        <h3>Claustrophobie</h3>
+        <p>La sensation d'enfermement provoquée par le masque réactive une peur profonde, souvent inconsciente, de l'espace confiné.</p>
+      </div>
+      <div class="raison-card">
+        <div class="raison-icon">🪞</div>
+        <h3>Image de soi</h3>
+        <p>Accepter de dormir appareillé implique une transformation de l'image corporelle nocturne difficile à intégrer pour certains patients.</p>
+      </div>
+      <div class="raison-card">
+        <div class="raison-icon">😤</div>
+        <h3>Désagrément sensoriel</h3>
+        <p>Le bruit, la pression, la sensation mécanique du masque peuvent devenir insupportables lorsqu'une résistance inconsciente s'y ajoute.</p>
+      </div>
+      <div class="raison-card">
+        <div class="raison-icon">🌙</div>
+        <h3>Autres plaintes du sommeil</h3>
+        <p>Certains patients sont orientés sans diagnostic d'apnées confirmé mais présentent des troubles : somnambulisme, terreurs nocturnes, éveils nocturnes fréquents.</p>
+      </div>
+      <div class="raison-card">
+        <div class="raison-icon">🧠</div>
+        <h3>Résistance inconsciente</h3>
+        <p>Le traitement est compris et accepté rationnellement — mais une part du patient s'y oppose malgré tout. L'hypnose agit à ce niveau.</p>
+      </div>
+      <div class="raison-card">
+        <div class="raison-icon">🤝</div>
+        <h3>Manque d'accompagnement</h3>
+        <p>Le suivi médical ne couvre pas toujours la dimension psychologique de l'observance. C'est le chaînon manquant que l'hypnose vient compléter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DÉROULÉ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Comment ça se passe</div>
+      <h2 class="section-title">Le protocole <em>en pratique</em></h2>
+    </div>
+    <div class="apnee-process">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <div class="process-content">
+          <h3>Orientation par un PSAD ou un médecin</h3>
+          <p>Dom'Air Santé, SOS Oxygène, ASDIA ou votre pneumologue vous orientent vers le cabinet. Un compte-rendu peut être transmis au prescripteur si souhaité.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <div class="process-content">
+          <h3>Entretien de cadrage (première séance)</h3>
+          <p>Nous identifions ensemble la nature du frein : claustrophobie, image de soi, résistance inconsciente. Cette étape oriente le travail hypnotique.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <div class="process-content">
+          <h3>Séance d'hypnose ericksonienne</h3>
+          <p>La séance travaille directement sur le mécanisme identifié. Vous restez pleinement conscient et acteur du processus.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <div class="process-content">
+          <h3>Suivi et bilan</h3>
+          <p>Dans la majorité des cas, 1 à 2 séances suffisent. Un bilan à distance permet de mesurer l'évolution de l'observance.</p>
+        </div>
+      </div>
+    </div>
+    <div class="apnee-legal-note">
+      L'hypnose ericksonienne est une approche complémentaire du traitement médical. Elle ne remplace pas la prise en charge par votre médecin ou votre prestataire de santé à domicile.
+    </div>
+  </div>
+</section>
+
+<!-- RÉSEAU -->
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Réseau</div>
+      <h2 class="section-title">Des partenaires <em>médicaux structurés</em></h2>
+      <p class="section-desc">Depuis 2019, je travaille en partenariat avec les principaux prestataires de santé à domicile de la région pour les patients apnées non observants.</p>
+    </div>
+    <div class="reseau-cards">
+      <div class="reseau-card">
+        <div class="reseau-card-name">Dom'Air Santé</div>
+        <p>Partenariat historique — Symposia 2019 (Andorra) et 2023. Présentation des résultats aux pneumologues et ORL des Pyrénées Atlantique et Hautes-Pyrénées.</p>
+      </div>
+      <div class="reseau-card">
+        <div class="reseau-card-name">SOS Oxygène</div>
+        <p>Atelier "Hypnose & Trouble du Sommeil" au Congrès Cardiosleep (Corse, 2022). Collaboration active sur l'accompagnement des patients apnées.</p>
+      </div>
+      <div class="reseau-card">
+        <div class="reseau-card-name">ASDIA</div>
+        <p>Partenaire PSAD pour l'accompagnement des patients non observants dans la région Nouvelle-Aquitaine.</p>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top: 64px;">
+      <div class="section-tag">Congrès</div>
+      <h2 class="section-title">Présenté devant <em>les professionnels</em></h2>
+    </div>
+    <div class="congres-mini">
+      <div class="congres-mini-item">
+        <div class="congres-mini-date">Mars 2023</div>
+        <div class="congres-mini-text">Symposia Dom'Air Santé — résultats de 4 ans de partenariat (37% d'observance retrouvée)</div>
+      </div>
+      <div class="congres-mini-item">
+        <div class="congres-mini-date">Nov. 2022</div>
+        <div class="congres-mini-text">Congrès ORL & Pneumologie de l'Océan Indien — 2ème participation</div>
+      </div>
+      <div class="congres-mini-item">
+        <div class="congres-mini-date">Juil. 2022</div>
+        <div class="congres-mini-text">Congrès Cardiosleep, Corse — Atelier Hypnose & Trouble du Sommeil</div>
+      </div>
+      <div class="congres-mini-item">
+        <div class="congres-mini-date">Déc. 2019</div>
+        <div class="congres-mini-text">Congrès international, Île Maurice — Plénière "Hypnose et Sommeil"</div>
+      </div>
+      <div class="congres-mini-item">
+        <div class="congres-mini-date">Mars 2019</div>
+        <div class="congres-mini-text">Symposia Dom'Air Santé, Andorra — présentation aux pneumologues, généralistes et ORL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Vous êtes patient ou professionnel de santé ?</h2>
+      <p>Prenez rendez-vous directement ou contactez-moi pour discuter d'une orientation.</p>
+      <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="btn-white">
+        Prendre rendez-vous
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Benoît <span>Raffard</span></div>
+        <div class="footer-contact">
+          <a href="https://maps.google.com/?q=28+rue+Scaliger+33000+Bordeaux" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            28 rue Scaliger, Bordeaux
+          </a>
+          <a href="tel:0619185999">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 19 18 59 99
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="contact.html#mentions-legales">Mentions légales</a><span class="footer-sep">·</span>
+        <a href="#">Confidentialité</a><span class="footer-sep">·</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Prendre rendez-vous
+  </a>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
