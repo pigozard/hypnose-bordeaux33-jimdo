@@ -9,39 +9,39 @@
 <style>
 /* Hero foncé spécifique */
 .apnee-hero {
-  background: linear-gradient(135deg, #3D1F10 0%, #5C2E18 100%);
+  background: var(--color-bg-warm);
   padding: 140px 0 100px;
-  color: #fff;
+  border-bottom: 1px solid var(--color-border);
 }
-.apnee-hero .section-tag { color: rgba(255,255,255,0.5); }
+.apnee-hero .section-tag { color: var(--color-accent); }
 .apnee-hero h1 {
   font-family: var(--font-display);
   font-size: 3.2rem; font-weight: 500;
   line-height: 1.1; letter-spacing: -0.03em;
-  margin-bottom: 20px; color: #fff;
+  margin-bottom: 20px; color: var(--color-text);
 }
-.apnee-hero h1 em { font-style: italic; color: #F0A882; }
+.apnee-hero h1 em { font-style: italic; color: var(--color-accent); }
 .apnee-hero p {
-  font-size: 1.05rem; color: rgba(255,255,255,0.72);
+  font-size: 1.05rem; color: var(--color-text-soft);
   line-height: 1.75; max-width: 560px; margin-bottom: 0;
 }
 .apnee-hero-stats {
   display: flex; gap: 48px; margin-top: 48px; padding-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  border-top: 1px solid var(--color-border);
   flex-wrap: wrap;
 }
 .apnee-hero-stat-num {
   font-family: var(--font-display);
   font-size: 2.8rem; font-weight: 700;
-  color: #F0A882; line-height: 1;
+  color: var(--color-accent); line-height: 1;
 }
 .apnee-hero-stat-label {
-  font-size: 0.82rem; color: rgba(255,255,255,0.5);
+  font-size: 0.82rem; color: var(--color-text-muted);
   margin-top: 6px; line-height: 1.5;
 }
 .apnee-hero-note {
   font-size: 0.72rem; font-style: italic;
-  color: rgba(255,255,255,0.3);
+  color: var(--color-text-muted);
   margin-top: 16px;
 }
 
@@ -235,7 +235,7 @@
   <div class="container">
     <div class="section-tag">Spécialité</div>
     <h1>Hypnose &<br><em>apnées du sommeil</em></h1>
-    <p>Vous souffrez d'apnées du sommeil mais ne supportez pas votre masque CPAP ? L'hypnose Ericksonienne agit sur les freins psychologiques qui empêchent l'observance du traitement — et les résultats sont mesurables.</p>
+    <p>Vous souffrez d'apnées du sommeil mais ne supportez pas votre masque CPAP ? L'hypnose ericksonienne agit sur les freins psychologiques qui empêchent l'observance du traitement — et les résultats sont mesurables.</p>
     <div class="apnee-hero-stats">
       <div>
         <div class="apnee-hero-stat-num">37%</div>
@@ -262,7 +262,7 @@
         <h2>Le masque : pas un problème technique, un problème psychologique</h2>
         <p>L'apnée du sommeil se traite efficacement avec une ventilation en pression positive (CPAP). Pourtant, une part significative des patients abandonne ce traitement — non pas parce qu'il ne fonctionne pas, mais parce qu'ils ne parviennent pas à tolérer le port du masque.</p>
         <p>Les raisons sont rarement mécaniques. Elles sont psychologiques : une claustrophobie latente activée par le masque, une difficulté à accepter l'image renvoyée, ou simplement une résistance inconsciente à un objet perçu comme intrusif.</p>
-        <p>C'est précisément là qu'intervient l'hypnose Ericksonienne. En travaillant sur l'inconscient — là où se logent ces résistances — elle permet de lever les freins qui bloquent l'observance, souvent en une à deux séances.</p>
+        <p>C'est précisément là qu'intervient l'hypnose ericksonienne. En travaillant sur l'inconscient — là où se logent ces résistances — elle permet de lever les freins qui bloquent l'observance, souvent en une à deux séances.</p>
       </div>
       <div class="apnee-why-image">
         <img src="images/cabinet-6.png" alt="Cabinet Benoît Raffard — consultation hypnose sommeil Bordeaux">
@@ -326,7 +326,7 @@
         <div class="process-num">1</div>
         <div class="process-content">
           <h3>Orientation par un PSAD ou un médecin</h3>
-          <p>Dom'Air Santé, SOS Oxygène, ASDIA ou votre pneumologue vous orientent vers le cabinet. Un compte-rendu peut être transmis au prescripteur si souhaité.</p>
+          <p>Dom'Air Santé, SOS Oxygène ou votre pneumologue vous orientent vers le cabinet. Un compte-rendu peut être transmis au prescripteur si souhaité.</p>
         </div>
       </div>
       <div class="process-step">
@@ -339,7 +339,7 @@
       <div class="process-step">
         <div class="process-num">3</div>
         <div class="process-content">
-          <h3>Séance d'hypnose Ericksonienne</h3>
+          <h3>Séance d'hypnose ericksonienne</h3>
           <p>La séance travaille directement sur le mécanisme identifié. Vous restez pleinement conscient et acteur du processus.</p>
         </div>
       </div>
@@ -352,7 +352,7 @@
       </div>
     </div>
     <div class="apnee-legal-note">
-      L'hypnose Ericksonienne est une approche complémentaire du traitement médical. Elle ne remplace pas la prise en charge par votre médecin ou votre prestataire de santé à domicile.
+      L'hypnose ericksonienne est une approche complémentaire du traitement médical. Elle ne remplace pas la prise en charge par votre médecin ou votre prestataire de santé à domicile.
     </div>
   </div>
 </section>
@@ -373,10 +373,6 @@
       <div class="reseau-card">
         <div class="reseau-card-name">SOS Oxygène</div>
         <p>Atelier "Hypnose & Trouble du Sommeil" au Congrès Cardiosleep (Corse, 2022). Collaboration active sur l'accompagnement des patients apnées.</p>
-      </div>
-      <div class="reseau-card">
-        <div class="reseau-card-name">ASDIA</div>
-        <p>Partenaire PSAD pour l'accompagnement des patients non observants dans la région Nouvelle-Aquitaine.</p>
       </div>
     </div>
 
