@@ -6,12 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
 
 :root {
-  --color-accent:       #5B7E6B;
-  --color-accent-dark:  #4A6A58;
-  --color-accent-bg:    #EBF1ED;
+  --color-accent:       #C17A5A;
+  --color-accent-dark:  #A8623F;
+  --color-accent-bg:    #F5E8E0;
   --color-gold:         #E8884E;
-  --color-bg:           #FAFAF8;
-  --color-bg-warm:      #F0EAE0;
+  --color-bg:           #FAF7F2;
+  --color-bg-warm:      #F0E8DF;
   --color-white:        #ffffff;
   --color-text:         #2C2825;
   --color-text-soft:    #5C5249;
@@ -61,10 +61,9 @@ a { color: inherit; text-decoration: none; }
   transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 #nav.scrolled {
-  background: rgba(44,40,37,0.96);
-  backdrop-filter: blur(12px);
-  border-color: rgba(255,255,255,0.08);
-  box-shadow: var(--shadow-md);
+  background: var(--color-bg);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 .nav-inner {
   max-width: var(--container);
@@ -85,8 +84,8 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-logo img { height: 52px; width: auto; }
 .nav-logo span { color: var(--color-accent); transition: color var(--transition); }
-#nav.scrolled .nav-logo { color: rgba(255,255,255,0.95); }
-#nav.scrolled .nav-logo span { color: var(--color-gold); }
+#nav.scrolled .nav-logo { color: var(--color-text); }
+#nav.scrolled .nav-logo span { color: var(--color-accent); }
 
 .nav-links {
   list-style: none; display: flex; align-items: center; gap: 6px;
@@ -100,11 +99,11 @@ a { color: inherit; text-decoration: none; }
 .nav-links a:hover, .nav-links a.active {
   color: var(--color-text); background: var(--color-bg-warm);
 }
-#nav.scrolled .nav-links a { color: rgba(255,255,255,0.65); }
+#nav.scrolled .nav-links a { color: var(--color-text-soft); }
 #nav.scrolled .nav-links a:hover,
 #nav.scrolled .nav-links a.active {
-  color: rgba(255,255,255,0.95);
-  background: rgba(255,255,255,0.08);
+  color: var(--color-text);
+  background: var(--color-bg-warm);
 }
 .nav-cta {
   display: inline-flex !important; align-items: center; gap: 7px;
@@ -116,9 +115,6 @@ a { color: inherit; text-decoration: none; }
   transition: background var(--transition) !important;
 }
 .nav-cta:hover { background: var(--color-accent-dark) !important; }
-#nav.scrolled .nav-cta { background: var(--color-gold) !important; }
-#nav.scrolled .nav-cta:hover { background: #d4703a !important; }
-
 .nav-mobile-toggle {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
@@ -128,7 +124,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--color-text); border-radius: 2px;
   transition: var(--transition);
 }
-#nav.scrolled .nav-mobile-toggle span { background: rgba(255,255,255,0.9); }
+#nav.scrolled .nav-mobile-toggle span { background: var(--color-text); }
 
 .nav-mobile-menu {
   display: none;
