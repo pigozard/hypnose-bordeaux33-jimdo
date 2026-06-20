@@ -1,0 +1,190 @@
+/* Hero foncé spécifique */
+.apnee-hero {
+  background: var(--color-bg-warm);
+  padding: 140px 0 100px;
+  border-bottom: 1px solid var(--color-border);
+}
+.apnee-hero .section-tag { color: var(--color-accent); }
+.apnee-hero h1 {
+  font-family: var(--font-display);
+  font-size: 3.2rem; font-weight: 500;
+  line-height: 1.1; letter-spacing: -0.03em;
+  margin-bottom: 20px; color: var(--color-text);
+}
+.apnee-hero h1 em { font-style: italic; color: var(--color-accent); }
+.apnee-hero p {
+  font-size: 1.05rem; color: var(--color-text-soft);
+  line-height: 1.75; max-width: 560px; margin-bottom: 0;
+}
+.apnee-hero-stats {
+  display: flex; gap: 48px; margin-top: 48px; padding-top: 40px;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+.apnee-hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem; font-weight: 700;
+  color: var(--color-accent); line-height: 1;
+}
+.apnee-hero-stat-label {
+  font-size: 0.82rem; color: var(--color-text-muted);
+  margin-top: 6px; line-height: 1.5;
+}
+.apnee-hero-note {
+  font-size: 0.72rem; font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: 16px;
+}
+
+/* Sections contenu */
+.apnee-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.apnee-why-text h2 {
+  font-family: var(--font-display);
+  font-size: 1.9rem; font-weight: 600;
+  margin-bottom: 18px; line-height: 1.2;
+}
+.apnee-why-text p {
+  font-size: 0.95rem; color: var(--color-text-soft);
+  line-height: 1.8; margin-bottom: 14px;
+  text-align: justify;
+}
+.apnee-why-image {
+  border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+  background: var(--color-bg-warm);
+  display: flex; align-items: center; justify-content: center;
+}
+.apnee-why-image img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Raisons intolérance */
+.raisons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.raison-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: all var(--transition);
+}
+.raison-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.raison-icon { font-size: 1.6rem; margin-bottom: 14px; }
+.raison-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;
+}
+.raison-card p {
+  font-size: 0.85rem; color: var(--color-text-soft); line-height: 1.65;
+}
+
+/* Process */
+.apnee-process {
+  display: flex; flex-direction: column; gap: 0;
+  max-width: 680px; margin: 0 auto;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+}
+.process-step:last-child { border-bottom: none; }
+.process-num {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent-bg);
+  border: 1.5px solid var(--color-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+.process-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;
+  padding-top: 8px;
+}
+.process-content p {
+  font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.65;
+}
+
+/* Réseau */
+.reseau-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.reseau-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+}
+.reseau-card-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--color-accent); margin-bottom: 8px;
+}
+.reseau-card p {
+  font-size: 0.82rem; color: var(--color-text-soft); line-height: 1.6;
+}
+
+/* Congrès inline */
+.congres-mini {
+  max-width: 680px; margin: 0 auto;
+}
+.congres-mini-item {
+  display: flex; gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: baseline;
+}
+.congres-mini-date {
+  font-family: var(--font-display);
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--color-accent); min-width: 80px;
+}
+.congres-mini-text {
+  font-size: 0.88rem; color: var(--color-text-soft); line-height: 1.6;
+}
+
+/* Note légale */
+.apnee-legal-note {
+  max-width: 640px; margin: 40px auto 0;
+  padding: 18px 22px;
+  background: var(--color-bg-warm);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.82rem; color: var(--color-text-soft); line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .apnee-why-grid { grid-template-columns: 1fr; gap: 36px; }
+  .raisons-grid { grid-template-columns: 1fr 1fr; }
+  .reseau-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .apnee-hero { padding: 110px 0 72px; }
+  .apnee-hero h1 { font-size: 2.2rem; }
+  .apnee-hero-stats { gap: 28px; }
+  .raisons-grid { grid-template-columns: 1fr; }
+  .process-step { grid-template-columns: 44px 1fr; gap: 16px; }
+}

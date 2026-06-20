@@ -5,140 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Qu'est-ce que l'hypnose Ericksonienne ? Découvrez comment elle fonctionne, ses indications (stress, sommeil, tabac, phobies) et les réponses à vos questions.">
 <title>L'hypnose Ericksonienne — Benoît Raffard, Hypnothérapeute Bordeaux</title>
-<link rel="stylesheet" href="style.css">
-<style>
-.hypno-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.hypno-intro-text h2 {
-  font-family: var(--font-display);
-  font-size: 1.9rem; font-weight: 600;
-  margin-bottom: 18px; line-height: 1.2;
-}
-.hypno-intro-text p {
-  font-size: 0.95rem; color: var(--color-text-soft);
-  line-height: 1.8; margin-bottom: 14px;
-  text-align: justify;
-}
-.hypno-intro-image {
-  border-radius: 20px; overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  aspect-ratio: 4/3;
-}
-.hypno-intro-image img {
-  width: 100%; height: 100%; object-fit: cover;
-}
-
-.indications-full-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.indication-full-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 24px 20px;
-  transition: all var(--transition);
-}
-.indication-full-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-.indication-full-card .icon { font-size: 1.3rem; margin-bottom: 12px; }
-.indication-full-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;
-}
-.indication-full-card p {
-  font-size: 0.85rem; color: var(--color-text-soft); line-height: 1.6;
-}
-
-/* Traumatismes */
-.trauma-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.trauma-text h2 {
-  font-family: var(--font-display);
-  font-size: 1.9rem; font-weight: 600;
-  margin-bottom: 18px; line-height: 1.2;
-}
-.trauma-text p {
-  font-size: 0.95rem; color: var(--color-text-soft);
-  line-height: 1.8; margin-bottom: 14px;
-  text-align: justify;
-}
-.trauma-exemples {
-  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
-}
-.trauma-tag {
-  padding: 6px 14px;
-  background: var(--color-accent-bg);
-  border: 1px solid rgba(91,126,107,0.18);
-  border-radius: 50px;
-  font-size: 0.78rem; font-weight: 500;
-  color: var(--color-accent);
-}
-.trauma-quote {
-  background: linear-gradient(135deg, #3D1F10 0%, #5C2E18 100%);
-  border-radius: 18px; padding: 40px 36px;
-  color: #fff;
-}
-.trauma-quote-text {
-  font-family: var(--font-display);
-  font-size: 1.4rem; font-style: italic;
-  line-height: 1.5; color: rgba(255,255,255,0.9);
-  margin-bottom: 20px;
-}
-.trauma-quote-sub {
-  font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.65;
-}
-@media (max-width: 1024px) {
-  .trauma-grid { grid-template-columns: 1fr; gap: 36px; }
-}
-
-.disclaimer {
-  max-width: 640px; margin: 40px auto 0;
-  padding: 20px 24px;
-  background: var(--color-bg-warm);
-  border-left: 3px solid var(--color-gold);
-  border-radius: 0 10px 10px 0;
-  font-size: 0.85rem; color: var(--color-text-soft); line-height: 1.65;
-}
-
-.photo-strip {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 16px;
-  height: 280px;
-}
-.photo-strip-img {
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.photo-strip-img img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.photo-strip-img:hover img { transform: scale(1.03); }
-
-@media (max-width: 1024px) {
-  .hypno-intro-grid { grid-template-columns: 1fr; gap: 40px; }
-  .indications-full-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-  .indications-full-grid { grid-template-columns: 1fr; }
-  .photo-strip { grid-template-columns: 1fr; height: 220px; }
-  .photo-strip-img:last-child { display: none; }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hypnose.css">
 </head>
 <body>
 
@@ -405,6 +273,6 @@
   </a>
 </div>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

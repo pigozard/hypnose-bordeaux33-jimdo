@@ -5,143 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Tarifs, prise de rendez-vous et contact. Cabinet d'hypnose Benoît Raffard, 28 rue Scaliger, 33000 Bordeaux. 80€ la séance.">
 <title>Contact & Tarifs — Benoît Raffard, Hypnothérapeute Bordeaux</title>
-<link rel="stylesheet" href="style.css">
-<style>
-/* Tarifs */
-.tarifs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.tarif-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  padding: 36px 28px;
-  text-align: center;
-  transition: all var(--transition);
-  position: relative;
-}
-.tarif-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-.tarif-card.featured {
-  border-color: var(--color-accent);
-  box-shadow: 0 4px 20px rgba(91,127,168,0.12);
-}
-.tarif-card.featured::after {
-  content: 'Le plus demandé';
-  position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
-  background: var(--color-accent); color: var(--color-white);
-  font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.08em; padding: 3px 16px; border-radius: 50px;
-}
-.tarif-label {
-  font-family: var(--font-display);
-  font-size: 1.25rem; font-weight: 600; margin-bottom: 4px;
-}
-.tarif-sub { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 18px; }
-.tarif-price {
-  font-family: var(--font-display);
-  font-size: 2.8rem; font-weight: 700;
-  color: var(--color-accent); line-height: 1;
-}
-.tarif-price-unit { font-size: 1rem; font-weight: 400; color: var(--color-text-muted); }
-.tarif-duration { font-size: 0.82rem; color: var(--color-text-muted); margin: 6px 0 22px; }
-.tarif-cta {
-  display: block; padding: 12px;
-  background: var(--color-accent); color: var(--color-white);
-  border-radius: 10px; font-size: 0.88rem; font-weight: 600;
-  text-decoration: none; transition: background var(--transition);
-}
-.tarif-cta:hover { background: var(--color-accent-dark); }
-.tarif-note {
-  font-size: 0.78rem; color: var(--color-text-muted);
-  text-align: center; max-width: 520px;
-  margin: 28px auto 0; line-height: 1.65;
-}
-.tarif-payment {
-  text-align: center; margin-top: 18px;
-  font-size: 0.85rem; color: var(--color-text-soft);
-}
-
-/* Annulation */
-.annulation-notice {
-  max-width: 680px; margin: 0 auto;
-  padding: 20px 24px;
-  background: var(--color-bg-warm);
-  border-left: 3px solid var(--color-gold);
-  border-radius: 0 10px 10px 0;
-  font-size: 0.85rem; color: var(--color-text-soft); line-height: 1.65;
-}
-
-/* Contact grid */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.contact-info { display: flex; flex-direction: column; gap: 28px; }
-.contact-block h3 {
-  font-family: var(--font-display);
-  font-size: 1.2rem; font-weight: 600; margin-bottom: 12px;
-}
-.contact-detail {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 0.92rem; color: var(--color-text-soft); margin-bottom: 10px;
-}
-.contact-detail svg { width: 20px; height: 20px; color: var(--color-accent); flex-shrink: 0; }
-.contact-detail a { color: var(--color-text-soft); transition: color var(--transition); }
-.contact-detail a:hover { color: var(--color-accent); }
-
-.contact-note {
-  padding: 16px 20px;
-  background: var(--color-accent-bg);
-  border-radius: 12px;
-  font-size: 0.85rem; color: var(--color-accent);
-  line-height: 1.6;
-}
-
-.horaires-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.88rem;
-  color: var(--color-text-soft);
-}
-.horaires-table td {
-  padding: 5px 0;
-}
-.horaires-table td:first-child {
-  font-weight: 600;
-  color: var(--color-text);
-  width: 130px;
-}
-
-/* Map + photo */
-.map-photo-block {
-  display: flex; flex-direction: column; gap: 16px;
-}
-.map-wrapper {
-  border-radius: var(--radius); overflow: hidden;
-  border: 1px solid var(--color-border);
-  aspect-ratio: 1/1;
-}
-.map-wrapper iframe { width: 100%; height: 100%; border: 0; }
-.facade-contact {
-  border-radius: var(--radius); overflow: hidden;
-  height: 180px;
-}
-.facade-contact img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
-
-@media (max-width: 768px) {
-  .tarifs-grid { grid-template-columns: 1fr; max-width: 360px; }
-  .contact-grid { grid-template-columns: 1fr; }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
@@ -359,6 +224,6 @@
   </a>
 </div>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
