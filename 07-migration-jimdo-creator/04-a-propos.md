@@ -75,7 +75,7 @@
 **Position :** 1er élément
 
 ```html
-<section class="section" style="padding-top: 120px;">
+<section class="section" style="padding-top: 48px;">
   <div class="container">
     <div class="about-grid">
       <div class="about-image">

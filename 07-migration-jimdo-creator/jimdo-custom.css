@@ -1144,27 +1144,72 @@ a { color: inherit; text-decoration: none; }
 
 
 /* =============================================================
-   OVERRIDES JIMDO CREATOR
+   OVERRIDES JIMDO CREATOR — THÈME RIO DE JANEIRO
    ============================================================= */
 
-/* 1. Masquer la navigation et le footer natifs de Jimdo */
-.cc-nav,
-.j-nav,
-.cc-header,
-.j-header,
-[class*="navigation"],
-[class*="cc-nav"] { display: none !important; }
-
-.cc-footer,
-.j-footer,
-[class*="cc-footer"] { display: none !important; }
-
-/* 2. Supprimer le padding-bottom mobile (plus de barre CTA fixe native) */
-@media (max-width: 768px) {
-  body { padding-bottom: 0 !important; }
+/* ── 1. Nav sticky (position:fixed peut casser dans les containers Jimdo
+        si un ancêtre a overflow:hidden ou transform)
+        sticky = même comportement visuel, compatible dans tous les cas ── */
+#nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  /* Si la nav n'est pas full-width : décommenter les 2 lignes suivantes */
+  /* width: 100vw !important; */
+  /* margin-left: calc(50% - 50vw) !important; */
 }
 
-/* 3. Reset du padding Jimdo sur le premier élément de page
-      (Jimdo ajoute parfois un padding-top automatique au contenu) */
-.cc-page__content > *:first-child,
-.j-page > *:first-child { margin-top: 0 !important; }
+/* ── 2. Recalcul padding-top des héros
+        (sticky = nav dans le flux = 72px déjà occupés)
+        Formule : valeur originale − 72px = valeur corrigée
+        140px − 72px = 68px | 120px − 72px = 48px                      ── */
+.hero        { padding-top: 68px !important; }
+.page-hero   { padding: 68px 0 72px !important; }
+.apnee-hero  { padding: 68px 0 80px !important; }
+
+/* ── 3. Fond de page + reset padding-bottom mobile                     ── */
+body { background-color: #FAF7F2 !important; }
+@media (max-width: 768px) { body { padding-bottom: 0 !important; } }
+
+/* ── 4. Masquer les éléments natifs du thème Rio de Janeiro
+        → Ces sélecteurs couvrent les patterns Jimdo Creator connus.
+        Si un élément Rio persiste, identifier son sélecteur via F12
+        et ajouter une ligne { display: none !important; }             ── */
+
+/* Stage / bandeau image héro Rio */
+.j-stage,
+.cc-stage,
+.j-header__stage,
+.cc-header__stage { display: none !important; }
+
+/* Header wrapper */
+.j-header,
+.cc-header { display: none !important; }
+
+/* Navigation native Jimdo */
+.j-navigation,
+.cc-navigation,
+.j-navigation__container { display: none !important; }
+
+/* Footer natif */
+.j-footer,
+.cc-footer { display: none !important; }
+
+/* ── 5. Reset des marges/padding Jimdo sur les containers de contenu   ── */
+.j-content,
+.cc-content {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ── 6. Widgets HTML full-width sans padding parasite                  ── */
+.j-unit,
+.j-unit--width-full,
+.cc-htmlBlock {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+/* ── 7. Reset marges en haut de page                                   ── */
+.j-page > *:first-child,
+.cc-page__content > *:first-child { margin-top: 0 !important; }
