@@ -1,0 +1,314 @@
+# Page — À propos
+
+**URL Jimdo :** `/a-propos`  
+**Titre :** `À propos — Benoît Raffard, Hypnothérapeute Bordeaux`  
+**Meta description :** `Benoît Raffard, Maître Praticien en Hypnose Ericksonienne à Bordeaux. Parcours, certifications, interventions en congrès médicaux et réseau de partenaires.`
+
+**Images utilisées :**
+
+| Placeholder | Fichier |
+|---|---|
+| `[IMG:portrait]` | portrait.png |
+| `[IMG:facade-1]` | facade-1.png |
+| `[IMG:facade-2]` | facade-2.png |
+
+---
+
+## Widget 0 — Navigation
+
+**Widget Jimdo :** Élément HTML  
+**Position :** tout premier élément de la page  
+**Remplace la nav native Jimdo** (masquée via CSS override — voir guide)
+
+```html
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="[IMG:logo]" alt="Logo Benoît Raffard">
+      Benoît <span>Raffard</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/hypnose">L'hypnose</a></li>
+      <li><a href="/troubles-du-sommeil">Troubles du sommeil</a></li>
+      <li><a href="/a-propos" class="active">À propos</a></li>
+      <li><a href="/contact">Contact & tarifs</a></li>
+      <li><a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre RDV
+      </a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-menu">
+  <a href="/">Accueil</a>
+  <a href="/hypnose">L'hypnose</a>
+  <a href="/troubles-du-sommeil">Troubles du sommeil</a>
+  <a href="/a-propos" class="active">À propos</a>
+  <a href="/contact">Contact & tarifs</a>
+  <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
+</div>
+<script>
+(function() {
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+  });
+  var toggle = document.querySelector('.nav-mobile-toggle');
+  var mobileMenu = document.querySelector('.nav-mobile-menu');
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+    document.querySelectorAll('.nav-mobile-menu a').forEach(function(a) {
+      a.addEventListener('click', function() { mobileMenu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+```
+
+---
+
+## Widget 1 — Présentation (photo + biographie)
+
+**Widget Jimdo :** Élément HTML  
+**Position :** 1er élément
+
+```html
+<section class="section" style="padding-top: 120px;">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="about-image-frame">
+          <img src="[IMG:portrait]" alt="Benoît Raffard, hypnothérapeute à Bordeaux">
+        </div>
+        <div class="about-image-secondary">
+          <img src="[IMG:facade-1]" alt="Cabinet — 28 rue Scaliger, Bordeaux">
+        </div>
+      </div>
+      <div>
+        <div class="about-tag">À propos</div>
+        <h1 class="about-name">Benoît Raffard</h1>
+        <p class="about-text">Hypnothérapeute diplômé en 2017, j'ai complété ma formation par l'obtention d'un Diplôme Universitaire d'Éducation Thérapeutique du Patient (ETP) en 2024. Cette expertise complémentaire me permet d'enrichir ma prise en charge, d'accompagner chaque patient de manière personnalisée et de favoriser son autonomie dans son parcours de santé.</p>
+        <p class="about-text">Mon travail est de vous guider pour orienter votre attention vers l'objectif que vous souhaitez atteindre. Formé chez Xtrëma, je pratique l'hypnose Ericksonienne à Bordeaux depuis 2018 dans mon cabinet du centre-ville.</p>
+        <p class="about-text">Ma spécificité : je travaille en étroite collaboration avec des médecins, pneumologues et somnologues, notamment dans l'accompagnement des patients souffrant d'apnées du sommeil non observants à leur traitement. Ce partenariat innovant avec des prestataires de santé a montré des résultats concrets — 37% des patients non observants sont devenus observants en 1 à 2 séances.*</p>
+        <p class="about-text" style="font-size:0.78rem; font-style:italic; color: #9A8F85;">*Observation menée depuis 2019 du partenariat avec un PSAD.</p>
+        <p class="about-text">J'interviens régulièrement lors de congrès médicaux en France et à l'international pour présenter cette approche et échanger avec des professionnels de santé.</p>
+
+        <div class="about-badges">
+          <span class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Maître Praticien certifié
+          </span>
+          <span class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Adhérent SNH
+          </span>
+          <span class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Congrès médicaux internationaux
+          </span>
+          <span class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Dom'Air Santé · SOS Oxygène
+          </span>
+        </div>
+
+        <blockquote class="about-quote">
+          « Chacun a en lui toutes les ressources pour vivre sa bonne vie. »
+          <cite>— Milton Erickson</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget 2 — Interventions & congrès
+
+**Widget Jimdo :** Élément HTML
+
+```html
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Parcours</div>
+      <h2 class="section-title">Interventions & <em>congrès</em></h2>
+      <p class="section-desc">Quelques temps forts de mon activité auprès des professionnels de santé.</p>
+    </div>
+    <div class="events-list">
+      <div class="event-item">
+        <div class="event-date">Mars 2023</div>
+        <div class="event-content">
+          <h3>Symposia Dom'Air Santé</h3>
+          <p>Présentation des résultats de l'observation du partenariat avec Dom'Air Santé aux médecins de la région Pyrénées Atlantique et Hautes Pyrénées. 37% de réussite sur les patients non observants.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Nov. 2022</div>
+        <div class="event-content">
+          <h3>Congrès ORL & Pneumologie de l'Océan Indien</h3>
+          <p>2ème participation — présentation des chiffres issus de 4 ans d'observation avec Dom'Air Santé sur l'accompagnement des patients apnées du sommeil.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Juil. 2022</div>
+        <div class="event-content">
+          <h3>Congrès Cardiosleep, Corse</h3>
+          <p>Atelier Hypnose & Trouble du Sommeil au congrès médical sur le sommeil, en partenariat avec SOS Oxygène.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Oct. 2020</div>
+        <div class="event-content">
+          <h3>Symposium GSK — BPCO et Tabac</h3>
+          <p>Intervention auprès de médecins généralistes d'Aquitaine sur l'intérêt de l'hypnose dans la prise en charge globale de la BPCO et du sevrage tabagique.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Déc. 2019</div>
+        <div class="event-content">
+          <h3>Congrès international, Île Maurice</h3>
+          <p>Plénière "Hypnose et Sommeil" et atelier "Hypnose et sevrage tabagique" au programme scientifique du congrès d'ORL & Pneumologie de l'Océan Indien.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Mars 2019</div>
+        <div class="event-content">
+          <h3>Symposia Dom'Air Santé, Andorra</h3>
+          <p>Présentation de l'hypnothérapie et de son intérêt dans le cadre du sommeil devant des pneumologues, médecins généralistes et ORL spécialisés.</p>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Avr. 2019</div>
+        <div class="event-content">
+          <h3>Base aérienne 106, Mérignac</h3>
+          <p>Intervention sur l'intérêt de l'hypnothérapie dans le cadre d'une prise en charge médicale pluridisciplinaire, auprès du personnel de l'antenne médicale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget 3 — Réseau pluridisciplinaire
+
+**Widget Jimdo :** Élément HTML
+
+```html
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Réseau</div>
+      <h2 class="section-title">Prise en charge <em>pluridisciplinaire</em></h2>
+      <p class="section-desc">Je travaille en réseau avec des professionnels de santé pour un accompagnement global.</p>
+    </div>
+    <div class="reseau-inline">
+      <div class="reseau-col">
+        <h3>Médical</h3>
+        <ul>
+          <li>Médecin Généraliste</li>
+          <li>Médecin Somnologue</li>
+          <li>ORL, Pneumologue, Urologue</li>
+        </ul>
+      </div>
+      <div class="reseau-col">
+        <h3>Paramédical</h3>
+        <ul>
+          <li>Coach Sportif</li>
+          <li>Diététicienne / Nutritionniste</li>
+          <li>Kinésithérapeute, Ostéopathe</li>
+        </ul>
+      </div>
+      <div class="reseau-col">
+        <h3>Prestataires</h3>
+        <ul>
+          <li>Dom'Air Santé</li>
+          <li>SOS Oxygène</li>
+        </ul>
+      </div>
+    </div>
+    <div class="reseau-apnees-note">
+      J'accompagne les patients souffrant d'apnées du sommeil et non observants à leur traitement, en travaillant sur les raisons de l'intolérance à leur ventilation nocturne — claustrophobie, image de soi, désagrément lié au port du masque — pour améliorer durablement la qualité de leur sommeil.
+    </div>
+    <div class="facade-block">
+      <img src="[IMG:facade-2]" alt="28 rue Scaliger, Bordeaux — entrée du cabinet">
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget 4 — Bande CTA
+
+**Widget Jimdo :** Élément HTML
+
+```html
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Prêt à franchir le pas ?</h2>
+      <p>Le premier rendez-vous est le plus important.</p>
+      <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="btn-white">
+        Prendre rendez-vous
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget — Bouton CTA mobile (visible mobile uniquement)
+
+**Widget Jimdo :** Élément HTML  
+**Position :** juste avant le footer
+
+```html
+<div class="mobile-cta">
+  <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Prendre rendez-vous
+  </a>
+</div>
+```
+
+---
+
+## Widget 5 — Footer
+
+**Widget Jimdo :** Élément HTML  
+**Position :** dernier élément (identique sur toutes les pages)
+
+```html
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Benoît <span>Raffard</span></div>
+        <div class="footer-contact">
+          <a href="https://maps.google.com/?q=28+rue+Scaliger+33000+Bordeaux" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            28 rue Scaliger, Bordeaux
+          </a>
+          <a href="tel:0619185999">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 19 18 59 99
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="/contact#mentions-legales">Mentions légales</a><span class="footer-sep">·</span>
+        <a href="/contact#confidentialite">Confidentialité</a><span class="footer-sep">·</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+```

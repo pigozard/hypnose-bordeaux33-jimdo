@@ -1,0 +1,315 @@
+# Page — Contact & Tarifs
+
+**URL Jimdo :** `/contact`  
+**Titre :** `Contact & Tarifs — Benoît Raffard, Hypnothérapeute Bordeaux`  
+**Meta description :** `Tarifs, prise de rendez-vous et contact. Cabinet d'hypnose Benoît Raffard, 28 rue Scaliger, 33000 Bordeaux. 80€ la séance.`
+
+**Images utilisées :**
+
+| Placeholder | Fichier |
+|---|---|
+| `[IMG:facade-1]` | facade-1.png |
+
+---
+
+## Widget 0 — Navigation
+
+**Widget Jimdo :** Élément HTML  
+**Position :** tout premier élément de la page  
+**Remplace la nav native Jimdo** (masquée via CSS override — voir guide)
+
+```html
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="[IMG:logo]" alt="Logo Benoît Raffard">
+      Benoît <span>Raffard</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/hypnose">L'hypnose</a></li>
+      <li><a href="/troubles-du-sommeil">Troubles du sommeil</a></li>
+      <li><a href="/a-propos">À propos</a></li>
+      <li><a href="/contact" class="active">Contact & tarifs</a></li>
+      <li><a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre RDV
+      </a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-menu">
+  <a href="/">Accueil</a>
+  <a href="/hypnose">L'hypnose</a>
+  <a href="/troubles-du-sommeil">Troubles du sommeil</a>
+  <a href="/a-propos">À propos</a>
+  <a href="/contact" class="active">Contact & tarifs</a>
+  <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="nav-mobile-cta">Prendre rendez-vous</a>
+</div>
+<script>
+(function() {
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+  });
+  var toggle = document.querySelector('.nav-mobile-toggle');
+  var mobileMenu = document.querySelector('.nav-mobile-menu');
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+    document.querySelectorAll('.nav-mobile-menu a').forEach(function(a) {
+      a.addEventListener('click', function() { mobileMenu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+```
+
+---
+
+## Widget 1 — En-tête de page
+
+**Widget Jimdo :** Élément HTML  
+**Position :** 1er élément
+
+```html
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag">Rendez-vous</div>
+    <h1>Contact & <em>tarifs</em></h1>
+    <p>Prenez rendez-vous en ligne ou contactez-moi directement. Cabinet accessible au cœur de Bordeaux.</p>
+  </div>
+</section>
+```
+
+---
+
+## Widget 2 — Tarifs des séances
+
+**Widget Jimdo :** Élément HTML
+
+```html
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Tarifs</div>
+      <h2 class="section-title">Tarifs des <em>séances</em></h2>
+    </div>
+    <div class="tarifs-grid">
+      <div class="tarif-card featured">
+        <div class="tarif-label">Séance individuelle</div>
+        <div class="tarif-sub">Tous sujets</div>
+        <div class="tarif-price">80<span class="tarif-price-unit">€</span></div>
+        <div class="tarif-duration">≈ 1 heure · cabinet ou visio</div>
+        <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="tarif-cta">Prendre rendez-vous</a>
+      </div>
+      <div class="tarif-card">
+        <div class="tarif-label">Arrêt du tabac</div>
+        <div class="tarif-sub">Protocole 2 séances</div>
+        <div class="tarif-price">240<span class="tarif-price-unit">€</span></div>
+        <div class="tarif-duration">1h + 2h · à 1 semaine d'intervalle</div>
+        <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="tarif-cta">Prendre rendez-vous</a>
+      </div>
+    </div>
+    <p class="tarif-payment">Règlement par chèque, espèces ou virement.</p>
+    <p class="tarif-note">L'hypnose ne remplace pas un avis ou traitement médical. Seul un médecin est habilité à poser un diagnostic.</p>
+  </div>
+</section>
+```
+
+---
+
+## Widget 3 — Politique d'annulation
+
+**Widget Jimdo :** Élément HTML
+
+```html
+<section style="padding: 0 0 48px;">
+  <div class="container">
+    <div class="annulation-notice">
+      <strong>Politique d'annulation :</strong> tout rendez-vous annulé à moins de 48h ou non honoré sera facturé en totalité. Cette mesure a été mise en place suite à une forte augmentation d'annulations impactant la prise de rendez-vous pour des patients motivés.
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget 4 — Contact & Plan
+
+**Widget Jimdo :** Élément HTML
+
+> Le widget Google Maps est intégré via iframe. L'URL embed est conservée à l'identique depuis le site original.
+
+```html
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Contact</div>
+      <h2 class="section-title">Me <em>trouver</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <h3>Cabinet</h3>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>28 rue Scaliger, 33000 Bordeaux</span>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Accessible par escalier</span>
+          </div>
+        </div>
+        <div class="contact-block">
+          <h3>Horaires</h3>
+          <table class="horaires-table">
+            <tr><td>Mardi – Jeudi</td><td>9h – 12h &nbsp;/&nbsp; 14h – 18h</td></tr>
+            <tr><td>Vendredi</td><td>9h – 13h</td></tr>
+          </table>
+        </div>
+        <div class="contact-block">
+          <h3>Coordonnées</h3>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:0619185999">06 19 18 59 99</a>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:benoithypnose33@gmail.com">benoithypnose33@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-block">
+          <h3>Rendez-vous en ligne</h3>
+          <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="btn-primary" style="margin-top: 4px;">
+            Réserver sur Crenolibre
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="contact-note">
+          La séance peut se faire au cabinet ou en visioconférence (sous certaines conditions). Contactez-moi pour en discuter.
+        </div>
+      </div>
+
+      <div class="map-photo-block">
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.69593244345!2d-0.5981445!3d44.8392395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552723c35a3877%3A0x2482615582f5b1a4!2sBeno%C3%AEt%20Raffard%20Hypnose-Bordeaux33!5e1!3m2!1sfr!2sfr!4v1779372935537!5m2!1sfr!2sfr"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="facade-contact">
+          <img src="[IMG:facade-1]" alt="Entrée du cabinet — 28 rue Scaliger, Bordeaux">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget 5 — Mentions légales
+
+**Widget Jimdo :** Élément HTML  
+**Ancre :** ajouter `id="mentions-legales"` sur la section (déjà inclus ci-dessous)
+
+```html
+<section class="section" id="mentions-legales">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Légal</div>
+      <h2 class="section-title">Mentions <em>légales</em></h2>
+    </div>
+    <div style="max-width: 720px; margin: 0 auto; font-size: 0.88rem; color: #5C5249; line-height: 1.8;">
+      <p><strong>Responsable de la publication</strong><br>
+      Benoît Raffard — Auto-entrepreneur<br>
+      SIRET : 834 833 641<br>
+      28 rue Scaliger, 33000 Bordeaux<br>
+      Tél. : 06 19 18 59 99<br>
+      Email : benoithypnose33@gmail.com</p>
+
+      <p><strong>Hébergement</strong><br>
+      Ce site est hébergé par Jimdo GmbH, Stresemannstraße 375, 22761 Hamburg, Allemagne.</p>
+
+      <p><strong>Activité</strong><br>
+      Hypnothérapeute — pratique libérale non réglementée par un ordre professionnel.<br>
+      L'hypnose Ericksonienne ne se substitue en aucun cas à un avis médical ou à un traitement prescrit par un médecin.</p>
+
+      <p><strong>Données personnelles</strong><br>
+      Ce site ne collecte aucune donnée personnelle à des fins commerciales. Les informations transmises via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes.</p>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget 6 — Bande CTA
+
+**Widget Jimdo :** Élément HTML
+
+```html
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Prêt à franchir le pas ?</h2>
+      <p>Le premier rendez-vous est le plus important.</p>
+      <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank" class="btn-white">
+        Prendre rendez-vous
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Widget — Bouton CTA mobile (visible mobile uniquement)
+
+**Widget Jimdo :** Élément HTML  
+**Position :** juste avant le footer
+
+```html
+<div class="mobile-cta">
+  <a href="https://www.crenolibre.fr/prendre-rdv/15117_benoit-raffard-hypnose-bordeaux-33" target="_blank">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Prendre rendez-vous
+  </a>
+</div>
+```
+
+---
+
+## Widget 7 — Footer
+
+**Widget Jimdo :** Élément HTML  
+**Position :** dernier élément (identique sur toutes les pages)
+
+```html
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Benoît <span>Raffard</span></div>
+        <div class="footer-contact">
+          <a href="https://maps.google.com/?q=28+rue+Scaliger+33000+Bordeaux" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            28 rue Scaliger, Bordeaux
+          </a>
+          <a href="tel:0619185999">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 19 18 59 99
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="/contact#mentions-legales">Mentions légales</a><span class="footer-sep">·</span>
+        <a href="/contact#confidentialite">Confidentialité</a><span class="footer-sep">·</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.35);">© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+```
