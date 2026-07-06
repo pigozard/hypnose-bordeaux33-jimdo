@@ -1,7 +1,7 @@
 # Page — Troubles du sommeil & Apnées
 
-**URL Jimdo :** `/troubles-du-sommeil`  
-**Titre :** `Hypnose & Apnées du Sommeil — Benoît Raffard, Bordeaux`  
+**URL Jimdo :** `/troubles-du-sommeil`
+**Titre :** `Hypnose & Apnées du Sommeil — Benoît Raffard, Bordeaux`
 **Meta description :** `Hypnose et apnées du sommeil à Bordeaux. Benoît Raffard accompagne les patients non observants à leur traitement CPAP. Réseau médical structuré, résultats prouvés.`
 
 **Images utilisées :**
@@ -14,8 +14,8 @@
 
 ## Widget 0 — Navigation
 
-**Widget Jimdo :** Élément HTML  
-**Position :** tout premier élément de la page  
+**Widget Jimdo :** Élément HTML
+**Position :** tout premier élément de la page
 **Remplace la nav native Jimdo** (masquée via CSS override — voir guide)
 
 ```html
@@ -69,7 +69,7 @@
 
 ## Widget 1 — Hero Apnées
 
-**Widget Jimdo :** Élément HTML  
+**Widget Jimdo :** Élément HTML
 **Position :** 1er élément
 
 ```html
@@ -317,7 +317,7 @@
 
 ## Widget — Bouton CTA mobile (visible mobile uniquement)
 
-**Widget Jimdo :** Élément HTML  
+**Widget Jimdo :** Élément HTML
 **Position :** juste avant le footer
 
 ```html
@@ -333,7 +333,7 @@
 
 ## Widget 8 — Footer
 
-**Widget Jimdo :** Élément HTML  
+**Widget Jimdo :** Élément HTML
 **Position :** dernier élément (identique sur toutes les pages)
 
 ```html

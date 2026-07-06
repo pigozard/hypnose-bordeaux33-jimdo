@@ -1,7 +1,7 @@
 # Page — L'hypnose Ericksonienne
 
-**URL Jimdo :** `/hypnose`  
-**Titre :** `L'hypnose Ericksonienne — Benoît Raffard, Hypnothérapeute Bordeaux`  
+**URL Jimdo :** `/hypnose`
+**Titre :** `L'hypnose Ericksonienne — Benoît Raffard, Hypnothérapeute Bordeaux`
 **Meta description :** `Qu'est-ce que l'hypnose Ericksonienne ? Découvrez comment elle fonctionne, ses indications (stress, sommeil, tabac, phobies) et les réponses à vos questions.`
 
 **Images utilisées :**
@@ -12,13 +12,22 @@
 | `[IMG:cabinet-5]` | cabinet-5.png |
 | `[IMG:cabinet-1]` | cabinet-1.png |
 
+> Comme convenu : laisse les `[IMG:xxx]` tels quels pour l'instant. On fera la passe upload/remplacement d'images en une seule fois, une fois toutes les pages posées.
+
+---
+
+## Rappels avant de commencer (leçons de la page Troubles du sommeil)
+
+- **Ajoute chaque widget au milieu de la page**, jamais dans la colonne étroite de gauche ni collé contre le footer tout en bas — ces zones sont partagées entre toutes les pages sur ce thème et dupliqueront le contenu partout.
+- Si un doute sur l'emplacement, test rapide : colle `<h1>TEST</h1>`, enregistre, vérifie sur une autre page (ex: Séance) que ça n'apparaît pas.
+- Les liens de nav (`/hypnose`, `/a-propos`, `/contact`, `/troubles-du-sommeil`) restent en placeholder pour l'instant — correction groupée prévue une fois toutes les pages posées, avec les vrais slugs Jimdo.
+
 ---
 
 ## Widget 0 — Navigation
 
-**Widget Jimdo :** Élément HTML  
-**Position :** tout premier élément de la page  
-**Remplace la nav native Jimdo** (masquée via CSS override — voir guide)
+**Widget Jimdo :** Widget / HTML
+**Position :** tout premier élément de la page
 
 ```html
 <nav id="nav">
@@ -69,10 +78,10 @@
 
 ---
 
-## Widget 1 — En-tête de page (Page Hero)
+## Widget 1 — En-tête de page
 
-**Widget Jimdo :** Élément HTML  
-**Position :** 1er élément
+**Widget Jimdo :** Widget / HTML
+**Position :** 1er élément après la nav
 
 ```html
 <section class="page-hero">
@@ -86,9 +95,9 @@
 
 ---
 
-## Widget 2 — Introduction « Ce n'est pas ce que vous croyez »
+## Widget 2 — Introduction
 
-**Widget Jimdo :** Élément HTML
+**Widget Jimdo :** Widget / HTML
 
 ```html
 <section class="section">
@@ -112,7 +121,7 @@
 
 ## Widget 3 — Bande photos cabinet
 
-**Widget Jimdo :** Élément HTML
+**Widget Jimdo :** Widget / HTML
 
 ```html
 <div class="container" style="margin-bottom: 0;">
@@ -129,9 +138,9 @@
 
 ---
 
-## Widget 4 — Indications complètes
+## Widget 4 — Indications (12 cartes)
 
-**Widget Jimdo :** Élément HTML
+**Widget Jimdo :** Widget / HTML
 
 ```html
 <section class="section section-warm">
@@ -214,7 +223,7 @@
 
 ## Widget 5 — Traumatismes
 
-**Widget Jimdo :** Élément HTML
+**Widget Jimdo :** Widget / HTML
 
 ```html
 <section class="section">
@@ -250,11 +259,11 @@
 
 ---
 
-## Widget 6 — FAQ
+## Widget 6 — FAQ (accordéon + script inclus)
 
-**Widget Jimdo :** Élément HTML
+**Widget Jimdo :** Widget / HTML
 
-> La FAQ utilise un accordéon JavaScript. Ajouter le script JS ci-dessous **dans le même widget** après le HTML, ou dans un widget HTML séparé juste après.
+> ⚠️ Le script fait partie intégrante du widget — colle-le en entier, ne le sépare pas dans un autre bloc. Il gère l'ouverture/fermeture des questions au clic.
 
 ```html
 <section class="section section-warm">
@@ -306,23 +315,24 @@
     </div>
   </div>
 </section>
-
 <script>
-document.querySelectorAll('.faq-question').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var item = this.closest('.faq-item');
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i) {
-      i.classList.remove('open');
-      i.querySelector('.faq-answer').style.maxHeight = null;
+(function() {
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    var btn = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+    btn.addEventListener('click', function() {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
     });
-    if (!isOpen) {
-      item.classList.add('open');
-      var answer = item.querySelector('.faq-answer');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
   });
-});
+})();
 </script>
 ```
 
@@ -330,7 +340,7 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
 
 ## Widget 7 — Bande CTA
 
-**Widget Jimdo :** Élément HTML
+**Widget Jimdo :** Widget / HTML
 
 ```html
 <section class="cta-band">
@@ -351,7 +361,7 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
 
 ## Widget — Bouton CTA mobile (visible mobile uniquement)
 
-**Widget Jimdo :** Élément HTML  
+**Widget Jimdo :** Widget / HTML
 **Position :** juste avant le footer
 
 ```html
@@ -367,7 +377,7 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
 
 ## Widget 8 — Footer
 
-**Widget Jimdo :** Élément HTML  
+**Widget Jimdo :** Widget / HTML
 **Position :** dernier élément (identique sur toutes les pages)
 
 ```html
@@ -396,3 +406,12 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
   </div>
 </footer>
 ```
+
+---
+
+## Checklist spécifique à cette page
+
+- [ ] FAQ : l'accordéon s'ouvre/ferme au clic (script du Widget 6 bien collé en entier)
+- [ ] Grille indications (12 cartes) : s'affiche en 3 colonnes desktop, 1 colonne mobile
+- [ ] Aucun widget posé dans la colonne de gauche ou collé au footer (risque de duplication sur toutes les pages)
+- [ ] Lien actif "L'hypnose" bien surligné dans la nav sur cette page uniquement
