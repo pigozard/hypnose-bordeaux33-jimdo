@@ -1,7 +1,7 @@
 # Guide de migration — Ce soir (Benoît en ligne demain matin)
 
-**Site :** Benoît Raffard — Hypnothérapeute Bordeaux  
-**Contexte :** site Jimdo Creator existant, thème Rio de Janeiro actif, migration live  
+**Site :** Benoît Raffard — Hypnothérapeute Bordeaux
+**Contexte :** site Jimdo Creator existant, thème Rio de Janeiro actif, migration live
 **Durée estimée :** 2h30 à 3h | **Confiance :** ~88%
 
 ---
@@ -84,7 +84,7 @@ Ces sélecteurs serviront si les overrides CSS de la Phase 1 ne cachent pas enti
 
 ### 1A — Sauvegarder l'ancien CSS
 
-Dans Jimdo : **Design → Personnaliser → CSS**  
+Dans Jimdo : **Design → Personnaliser → CSS**
 Copier tout le CSS existant, le coller dans un fichier texte en local (au cas où).
 
 ---
@@ -142,7 +142,7 @@ Pour chaque page :
 
 ### Page 1 — À propos (~20 min)
 
-**Fichier :** `04-a-propos.md`  
+**Fichier :** `04-a-propos.md`
 **URL Jimdo :** `/a-propos`
 
 | # | Widget | Contenu |
@@ -159,7 +159,7 @@ Pour chaque page :
 
 ### Page 2 — Contact & tarifs (~20 min)
 
-**Fichier :** `05-contact-tarifs.md`  
+**Fichier :** `05-contact-tarifs.md`
 **URL Jimdo :** `/contact`
 
 | # | Widget | Contenu |
@@ -178,7 +178,7 @@ Pour chaque page :
 
 ### Page 3 — L'hypnose (~25 min)
 
-**Fichier :** `02-hypnose.md`  
+**Fichier :** `02-hypnose.md`
 **URL Jimdo :** `/hypnose`
 
 | # | Widget | Contenu |
@@ -200,7 +200,7 @@ Pour chaque page :
 
 ### Page 4 — Troubles du sommeil (~20 min)
 
-**Fichier :** `03-apnee-sommeil.md`  
+**Fichier :** `03-apnee-sommeil.md`
 **URL Jimdo :** `/troubles-du-sommeil`
 
 | # | Widget | Contenu |
@@ -220,7 +220,7 @@ Pour chaque page :
 
 ### Page 5 — Accueil (en dernier, ~25 min)
 
-**Fichier :** `01-accueil.md`  
+**Fichier :** `01-accueil.md`
 **URL Jimdo :** `/` (page d'accueil)
 
 | # | Widget | Contenu |
@@ -329,6 +329,18 @@ Ouvrir chaque page en mode visite normale et cocher :
 2. Cliquer sur l'image → copier l'URL exacte
 3. Ouvrir le widget HTML de la page → remplacer `src="..."` par la bonne URL
 4. Enregistrer
+
+
+LIENS DES IMAGES
+
+[IMG:logo] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i64eb8329cd8ca10a/version/1783376574/image.png
+[IMG:portrait] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i5a8f69d85ac00634/version/1783376588/image.png
+[IMG:facade-1] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i6380f66241e92016/version/1783376547/image.jpg
+[IMG:facade-2] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i4d33fc3fb8bf84c5/version/1783376560/image.jpg
+[IMG:cabinet-1] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i60dd9e0c810a6b56/version/1783376625/image.jpg
+[IMG:cabinet-3] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i13ef10392be3f5e9/version/1783376508/image.jpg
+[IMG:cabinet-5] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i91bf794463f24f2b/version/1783376521/image.jpg
+[IMG:cabinet-6] -> https://image.jimcdn.com/app/cms/image/transf/none/path/s05b5a39f7afee65f/image/i78b5af14837728fa/version/1783376534/image.jpg
 
 ---
 
