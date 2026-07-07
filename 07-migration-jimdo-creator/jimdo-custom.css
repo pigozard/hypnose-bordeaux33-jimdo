@@ -1213,3 +1213,98 @@ body { background-color: #FAF7F2 !important; }
 /* ── 7. Reset marges en haut de page                                   ── */
 .j-page > *:first-child,
 .cc-page__content > *:first-child { margin-top: 0 !important; }
+
+
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+}
+
+.btn-primary, .tarif-cta, .nav-cta, .apnee-teaser-cta,
+.btn-primary *, .tarif-cta *, .nav-cta *, .apnee-teaser-cta * {
+  color: #ffffff !important;
+}
+
+.btn-white, .btn-white * {
+  color: #C17A5A !important;
+}
+#header { display: none !important; } [data-container="navigation"] { display: none !important; }
+#footer { display: none !important; }
+
+.footer-contact a, .footer-contact a:link, .footer-contact a:visited {
+  color: rgba(255,255,255,0.55) !important;
+}
+.footer-contact a:hover {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+.footer-right a, .footer-right a:link, .footer-right a:visited {
+  color: rgba(255,255,255,0.45) !important;
+}
+.footer-right a:hover {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+/* Liens : pas de soulignement */
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+}
+
+/* Boutons pleins : texte blanc */
+.btn-primary, .tarif-cta, .nav-cta, .apnee-teaser-cta,
+.btn-primary *, .tarif-cta *, .nav-cta *, .apnee-teaser-cta * {
+  color: #ffffff !important;
+}
+
+/* Bouton blanc (fond blanc, texte orange) */
+.btn-white, .btn-white * {
+  color: #C17A5A !important;
+}
+
+/* Footer : coordonnées */
+.footer-contact a, .footer-contact a:link, .footer-contact a:visited {
+  color: rgba(255,255,255,0.55) !important;
+}
+.footer-contact a:hover {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+/* Footer : mentions légales / confidentialité */
+.footer-right a, .footer-right a:link, .footer-right a:visited {
+  color: rgba(255,255,255,0.45) !important;
+}
+.footer-right a:hover {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+/* Bouton CTA mobile (bas d'écran) */
+.mobile-cta a, .mobile-cta a:link, .mobile-cta a:visited, .mobile-cta a * {
+  color: #ffffff !important;
+}
+
+/* Menu mobile déroulant (hamburger) */
+.nav-mobile-menu a, .nav-mobile-menu a:link, .nav-mobile-menu a:visited {
+  color: rgba(255,255,255,0.7) !important;
+}
+.nav-mobile-menu a.active {
+  color: #ffffff !important;
+}
+.nav-mobile-cta, .nav-mobile-cta:link, .nav-mobile-cta:visited {
+  color: #ffffff !important;
+}
+
+.nav-links a, .nav-links a:link, .nav-links a:visited {
+  color: var(--color-text-soft) !important;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: var(--color-text) !important;
+}
+
+a.nav-cta, a.nav-cta:link, a.nav-cta:visited, a.nav-cta:hover {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+.apnee-hero p {
+  text-align: justify;
+}
+
